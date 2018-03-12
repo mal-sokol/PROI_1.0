@@ -10,24 +10,33 @@ class Ship
 {
 private:
 	string name;
-	int capacity;
 	int velocity;
-	int combatValue;
+	int manuverability;
+	int scope;
+	int durability;
+
 	
 	static int numberOfShips;
 	
 public:
-	Ship(string name, int capacity, int velocity, int combatValue);
+	Ship(string name, int velocity, int manuverability, int scope, int durability);
 	Ship();
 	~Ship();
 	
-	int getCapacity() {return capacity;}
+
 	int getVelocity() {return velocity;}
-	int getCombatValue() {return combatValue;}
 	static int getNumberOfShips() {return numberOfShips;}
 	
 	void getInfo();
 
+};
+
+class Cargo : public Ship {
+	
+};
+
+class Combat : public Ship {
+	
 };
 
 #endif // SHIP_HPP

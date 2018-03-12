@@ -10,17 +10,20 @@ Ship::~Ship()
 {
 }
 
-Ship::Ship(string name, int capacity, int velocity, int combatValue) {
+Ship::Ship(string name, int velocity, int manuverability, int scope, int durability) {
 	this->name = name;
-	this->capacity = capacity;
 	this->velocity = velocity;
-	this->combatValue = combatValue;
+	this->manuverability = manuverability;
+	this->scope = scope;
+	this->durability = durability;
+	
 	Ship::numberOfShips++;
 }
 
 void Ship::getInfo() {
 	cout << this->name << "\'s parameters:" << endl
-		<< "capacity: " << this->capacity << " units" << endl
-		<< "velocity: " << this->velocity << " km/h" << endl
-		<< "combat value: " << this->combatValue << " units" << endl;
+		<< "velocity: " << this->velocity << " pc/h" << endl
+		<< "manuverability: " << this->manuverability << " units" << endl
+		<< "scope: " << this->scope << " pc" << endl
+		<< "durability: " << this->durability << " units" << endl;
 }

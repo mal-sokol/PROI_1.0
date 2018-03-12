@@ -93,6 +93,8 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="Unit.cpp"/>
+    <File Name="Unit.hpp"/>
     <File Name="Ship.cpp"/>
     <File Name="Ship.hpp"/>
     <File Name="main.cpp"/>

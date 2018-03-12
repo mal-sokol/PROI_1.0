@@ -8,7 +8,7 @@ int main(int argc, char **argv)
 {
 	cout << "hello world" << endl;
 	
-	Ship XR027("XR027", 300, 120, 70);
+	Ship XR027("XR027", 300, 120, 70, 1000);
 	XR027.getInfo();
 	return 0;
 }
