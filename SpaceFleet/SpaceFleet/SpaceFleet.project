@@ -93,6 +93,7 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="fun.cpp"/>
     <VirtualDirectory Name="tests">
       <File Name="test1.cpp"/>
     </VirtualDirectory>
