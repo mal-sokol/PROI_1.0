@@ -1,4 +1,4 @@
-//Test tworzy obiekty typu Ship i Cargo oraz wyswietla dane obiektow.
+//Test tworzy obiekty typu Ship, Cargo i Combat oraz wyswietla dane obiektow.
 
 #include <iostream>
 #include <string>
@@ -12,13 +12,13 @@ string shipFlex(int num);
 
 int main(int argc, char **argv)
 {
-	Ship XR027("XR027", 300, 120, 70, 1000);
-	Cargo CHROM("CHROM", 200, 30, 7500, 45, 1200);
-	Cargo MIX("MIX", 450, 80, 1000, 75, 1000);
-	Cargo COS012("COS012", 80, 80, 500, 75, 4500);
-	Cargo TAS001("TAS001", 450, 70, 700, 75, 125);
-	Combat Attic001("Attic001", 170, 300, 20, 200, 600);
-	Combat Attic002("Attic002", 190, 250, 60, 175, 600);
+	Ship XR027("XR027", 300, 120, 1000);
+	Cargo CHROM("CHROM", 200, 30, 7500, 1200);
+	Cargo MIX("MIX", 450, 80, 1000, 1000);
+	Cargo COS012("COS012", 80, 80, 500, 4500);
+	Cargo TAS001("TAS001", 450, 70, 700, 125);
+	Combat Attic001("Attic001", 170, 300, 20, 600);
+	Combat Attic002("Attic002", 190, 250, 60, 600);
 	
 	cout << "Test tworzy " << Ship::getNumberOfShips() <<" "<< shipFlex(Ship::getNumberOfShips()) << endl
 		<< "W tym " << Cargo::getNumberOfCargo() <<" "<< shipFlex(Cargo::getNumberOfCargo())

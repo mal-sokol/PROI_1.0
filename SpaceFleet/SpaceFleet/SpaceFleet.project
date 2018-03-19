@@ -93,8 +93,8 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
-    <File Name="src/Weapon.cpp"/>
-    <File Name="src/Weapon.hpp"/>
+    <File Name="Weapon.cpp"/>
+    <File Name="Weapon.hpp"/>
     <File Name="Combat.hpp"/>
     <File Name="Combat.cpp"/>
     <File Name="fun.cpp"/>

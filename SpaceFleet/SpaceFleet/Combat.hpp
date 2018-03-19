@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Ship.hpp"
+#include "Weapon.hpp"
 
 using namespace std;
 
@@ -10,13 +11,16 @@ using namespace std;
 class Combat : public Ship
 {
 	int combatValue;
+	Weapon * weapon;
 	
 	static int numberOfCombat;
 	
 public:
 	void getInfo();
 	static int getNumberOfCombat() {return numberOfCombat;}
-	Combat(string name, int velocity, int manuverability, int scope, int durability, int combatValue);
+	
+	Combat();
+	Combat(string name, int velocity, int scope, int durability, int combatValue);
 	~Combat();
 
 };
