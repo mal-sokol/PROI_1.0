@@ -1,5 +1,4 @@
 #include "Cargo.hpp"
-#include "Ship.hpp"
 
 int Cargo::numberOfCargo = 0;
 
