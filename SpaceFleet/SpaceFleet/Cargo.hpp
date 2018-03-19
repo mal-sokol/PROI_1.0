@@ -16,7 +16,9 @@ class Cargo : public Ship
 public:
 	void getInfo();
 	static int getNumberOfCargo() {return numberOfCargo;}
-	Cargo(string name, int velocity, int manuverability, int scope, int durability, int capacity);
+	
+	Cargo();
+	Cargo(string name, int velocity, int scope, int durability, int capacity);
 	~Cargo();
 
 };

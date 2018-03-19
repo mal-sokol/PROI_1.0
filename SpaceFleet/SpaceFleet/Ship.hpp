@@ -13,13 +13,13 @@ private:
 	int velocity;
 	int scope;
 	int durability;
-
 	
+protected:
 	static int numberOfShips;
 	
 public:
 	Ship(string name, int velocity, int scope, int durability);
-//	Ship();
+	Ship();
 	~Ship();
 	
 

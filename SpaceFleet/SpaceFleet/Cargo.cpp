@@ -2,7 +2,15 @@
 
 int Cargo::numberOfCargo = 0;
 
-Cargo::Cargo(string name, int velocity, int manuverability, int scope, int durability, int capacity) : Ship(name, velocity, manuverability, scope, durability)
+Cargo::Cargo() : Ship("StdCargo", 30, 1200, 50)
+{
+	Ship::numberOfShips++;
+	Cargo::numberOfCargo++;
+	
+	this->capacity = 1000;
+}
+
+Cargo::Cargo(string name, int velocity, int scope, int durability, int capacity) : Ship(name, velocity, scope, durability)
 {
 	this->capacity = capacity;
 	
