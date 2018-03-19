@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/test1.cpp$(ObjectSuffix) $(IntermediateDirectory)/Cargo.cpp$(ObjectSuffix) $(IntermediateDirectory)/Unit.cpp$(ObjectSuffix) $(IntermediateDirectory)/Ship.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/Combat.cpp$(ObjectSuffix) $(IntermediateDirectory)/test1.cpp$(ObjectSuffix) $(IntermediateDirectory)/Cargo.cpp$(ObjectSuffix) $(IntermediateDirectory)/fun.cpp$(ObjectSuffix) $(IntermediateDirectory)/Unit.cpp$(ObjectSuffix) $(IntermediateDirectory)/Ship.cpp$(ObjectSuffix) 
 
 
 
@@ -93,6 +93,14 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/Combat.cpp$(ObjectSuffix): Combat.cpp $(IntermediateDirectory)/Combat.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/Combat.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Combat.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Combat.cpp$(DependSuffix): Combat.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Combat.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Combat.cpp$(DependSuffix) -MM Combat.cpp
+
+$(IntermediateDirectory)/Combat.cpp$(PreprocessSuffix): Combat.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Combat.cpp$(PreprocessSuffix) Combat.cpp
+
 $(IntermediateDirectory)/test1.cpp$(ObjectSuffix): test1.cpp $(IntermediateDirectory)/test1.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/test1.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/test1.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/test1.cpp$(DependSuffix): test1.cpp
@@ -108,6 +116,14 @@ $(IntermediateDirectory)/Cargo.cpp$(DependSuffix): Cargo.cpp
 
 $(IntermediateDirectory)/Cargo.cpp$(PreprocessSuffix): Cargo.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Cargo.cpp$(PreprocessSuffix) Cargo.cpp
+
+$(IntermediateDirectory)/fun.cpp$(ObjectSuffix): fun.cpp $(IntermediateDirectory)/fun.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/fun.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/fun.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/fun.cpp$(DependSuffix): fun.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/fun.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/fun.cpp$(DependSuffix) -MM fun.cpp
+
+$(IntermediateDirectory)/fun.cpp$(PreprocessSuffix): fun.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/fun.cpp$(PreprocessSuffix) fun.cpp
 
 $(IntermediateDirectory)/Unit.cpp$(ObjectSuffix): Unit.cpp $(IntermediateDirectory)/Unit.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/Unit.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Unit.cpp$(ObjectSuffix) $(IncludePath)

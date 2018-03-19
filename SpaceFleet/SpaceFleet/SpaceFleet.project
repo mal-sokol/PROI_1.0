@@ -93,6 +93,9 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="Combat.hpp"/>
+    <File Name="Combat.cpp"/>
+    <File Name="fun.cpp"/>
     <VirtualDirectory Name="tests">
       <File Name="test1.cpp"/>
     </VirtualDirectory>
