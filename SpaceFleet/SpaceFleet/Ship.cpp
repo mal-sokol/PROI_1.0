@@ -2,9 +2,9 @@
 
 int Ship::numberOfShips = 0;
 
-Ship::Ship()
-{
-}
+//Ship::Ship()
+//{
+//}
 
 Ship::~Ship()
 {
@@ -22,8 +22,8 @@ Ship::Ship(string name, int velocity, int manuverability, int scope, int durabil
 
 void Ship::getInfo() {
 	cout << this->name << "\'s parameters:" << endl
-		<< "velocity: " << this->velocity << " pc/h" << endl
+		<< "velocity: " << this->velocity << " %c" << endl
 		<< "manuverability: " << this->manuverability << " units" << endl
-		<< "scope: " << this->scope << " pc" << endl
+		<< "scope: " << this->scope << " ly" << endl
 		<< "durability: " << this->durability << " units" << endl;
 }

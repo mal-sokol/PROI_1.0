@@ -93,10 +93,14 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <VirtualDirectory Name="tests">
+      <File Name="test1.cpp"/>
+    </VirtualDirectory>
+    <File Name="Cargo.cpp"/>
+    <File Name="Cargo.hpp"/>
     <File Name="Unit.cpp"/>
     <File Name="Unit.hpp"/>
     <File Name="Ship.cpp"/>
     <File Name="Ship.hpp"/>
-    <File Name="main.cpp"/>
   </VirtualDirectory>
 </CodeLite_Project>
