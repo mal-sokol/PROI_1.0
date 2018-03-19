@@ -1,1 +1,1 @@
-./Debug/Combat.cpp.o ./Debug/test1.cpp.o ./Debug/Cargo.cpp.o ./Debug/fun.cpp.o ./Debug/Unit.cpp.o ./Debug/Ship.cpp.o   
+./Debug/test1.cpp.o ./Debug/Ship.cpp.o ./Debug/Combat.cpp.o ./Debug/fun.cpp.o ./Debug/Cargo.cpp.o ./Debug/Unit.cpp.o   
