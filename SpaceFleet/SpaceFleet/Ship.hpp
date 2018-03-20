@@ -18,8 +18,8 @@ protected:
 	static int numberOfShips;
 	
 public:
-	Ship(string name, int velocity, int scope, int durability);
 	Ship();
+	Ship(string name, int velocity = 50, int scope = 1000, int durability = 50);
 	~Ship();
 	
 

@@ -20,7 +20,7 @@ public:
 	static int getNumberOfCombat() {return numberOfCombat;}
 	
 	Combat();
-	Combat(string name, int velocity, int scope, int durability, int combatValue);
+	Combat(string name, int velocity = 70, int scope = 750, int durability = 70, int combatValue = 100);
 	~Combat();
 
 };

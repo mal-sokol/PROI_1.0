@@ -10,7 +10,7 @@ using namespace std;
 
 string shipFlex(int num);
 
-int main(int argc, char **argv)
+int test1()
 {
 	Ship XR027("XR027", 300, 120, 1000);
 	Cargo CHROM("CHROM", 200, 30, 7500, 1200);
