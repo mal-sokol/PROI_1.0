@@ -17,6 +17,8 @@ class Combat : public Ship
 	
 public:
 	void getInfo();
+//	void getWeapon();
+	
 	static int getNumberOfCombat() {return numberOfCombat;}
 	
 	Combat();

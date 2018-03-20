@@ -1,5 +1,7 @@
 #include "Weapon.hpp"
 
+string spacing(int, int);
+
 Weapon::Weapon(string name, int velocityInfluence, int scopeInfluence, int durabilityInfluence, int combatValue)
 {
 	cout<< "Dziala konstruktor Weapon" <<endl;
@@ -12,5 +14,10 @@ Weapon::Weapon(string name, int velocityInfluence, int scopeInfluence, int durab
 
 Weapon::~Weapon()
 {
+}
+
+void Weapon::getInfo() {
+	cout<< this->name << spacing((this->name).length(), 20) << this->velocityInfluence <<"%c  "<< this->scopeInfluence <<"ly  "
+		<< this->durabilityInfluence <<"units  combat value: "<< this->combatValue <<endl;
 }
 

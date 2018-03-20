@@ -22,6 +22,8 @@ public:
 	int getVelocityInf() {return velocityInfluence;}
 	int getScopeInf() {return scopeInfluence;}
 	int getDurabilityInf() {return durabilityInfluence;}
+	
+	void getInfo();
 
 };
 

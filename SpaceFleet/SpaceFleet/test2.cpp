@@ -24,6 +24,7 @@ int test2()
 		<< " typu transportowego, " << Combat::getNumberOfCombat() <<" "<< shipFlex(Combat::getNumberOfCombat())
 		<< " typu bojowego." << endl << endl;
 		
+		
 	X.getInfo();
 	cout<< endl;
 	Y.getInfo();
