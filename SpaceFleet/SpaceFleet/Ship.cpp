@@ -34,4 +34,6 @@ void Ship::getInfo() {
 		<< "velocity: " << this->velocity << " %c" << endl
 		<< "scope: " << this->scope << " ly" << endl
 		<< "durability: " << this->durability << " units" << endl;
+	
+//	printf("%10s%10d%10d%10d", this->name, this->velocity, this->scope, this->durability);
 }

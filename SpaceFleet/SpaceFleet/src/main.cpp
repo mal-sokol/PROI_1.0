@@ -8,10 +8,11 @@ using namespace std;
 
 int test1();
 int test2();
+int test3();
 
 int main() {
 	
-	test2();
+	test3();
 	
 	return 0;
 }

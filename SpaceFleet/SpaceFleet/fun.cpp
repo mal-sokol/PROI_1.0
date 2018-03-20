@@ -14,3 +14,14 @@ string shipFlex(int num) { //Odmiana slowa statek
 	
 	return word;
 }
+
+string spacing(int length, int total) { //Zwraca odpowiednia liczbe spacji
+	
+	int i;
+	int left = total - length;
+	string spacing;
+	
+	for(i=0; i<left; spacing = spacing + " ", i++);
+	
+	return spacing;
+}
