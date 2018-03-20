@@ -2,8 +2,9 @@
 
 int Ship::numberOfShips = 0;
 
-Ship::Ship()
-{
+Ship::Ship() {
+	
+	cout<< "Dziala domyslny konstruktor Ship"<< endl;
 	this->name = "Standard";
 	this->velocity = 50;
 	this->scope = 1000;
@@ -12,11 +13,9 @@ Ship::Ship()
 	Ship::numberOfShips++;
 }
 
-Ship::~Ship()
-{
-}
-
 Ship::Ship(string name, int velocity, int scope, int durability) {
+	
+	cout<< "Dziala konstruktor Ship"<< endl;
 	this->name = name;
 	this->velocity = velocity;
 	this->scope = scope;
@@ -24,6 +23,11 @@ Ship::Ship(string name, int velocity, int scope, int durability) {
 	
 	Ship::numberOfShips++;
 }
+
+Ship::~Ship()
+{
+}
+
 
 void Ship::getInfo() {
 	cout << this->name << "\'s parameters:" << endl

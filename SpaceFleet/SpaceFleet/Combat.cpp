@@ -4,7 +4,7 @@ int Combat::numberOfCombat = 0;
 
 Combat::Combat() : Ship("StdCombat", 70, 750, 70)
 {
-	Ship::numberOfShips++;
+	cout<< "Dziala domyslny konstruktor Combat"<< endl;
 	Combat::numberOfCombat++;
 	
 	this->combatValue = 100;
@@ -13,6 +13,7 @@ Combat::Combat() : Ship("StdCombat", 70, 750, 70)
 
 Combat::Combat(string name, int velocity, int scope, int durability, int combatValue) : Ship(name, velocity, scope, durability)
 {
+	cout<< "Dziala domyslny konstruktor Combat"<< endl;
 	this->combatValue = combatValue;
 	this->weapon = NULL;
 	
