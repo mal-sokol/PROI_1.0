@@ -1,6 +1,4 @@
-Mistle -10 -10 10 1900
-Atomic -50 -1000 -10 25000
-Random Weapon -87 -56 -2 749
-Fig -10 30 25 500
-Commet -50 1000 1000 4020
-Random Weapon -28 -99 29 764
+Random -62 -77 18 465
+Random -89 -68 -37 165
+Random -14 -64 36 781
+AI 100 -670 -200 10000
