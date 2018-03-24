@@ -24,10 +24,10 @@ Combat::~Combat()
 {
 }
 
-void Combat::getInfo() {
-	this->Ship::getInfo();
-	cout<< "combat value: " << this->combatValue << endl;
+void Combat::display() {
+	this->Ship::display();
+	cout<< "	combat value: " << this->combatValue;
 	if(this->weapon)
-		cout<< "equiped with: " << (*this->weapon).getName() << endl;
+		cout<< "equiped with: " << (*this->weapon).getName();
 }
 

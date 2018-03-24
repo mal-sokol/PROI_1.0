@@ -29,11 +29,12 @@ Ship::~Ship()
 }
 
 
-void Ship::getInfo() {
-	cout << this->name << "\'s parameters:" << endl
-		<< "velocity: " << this->velocity << " %c" << endl
-		<< "scope: " << this->scope << " ly" << endl
-		<< "durability: " << this->durability << " units" << endl;
+void Ship::display() {
 	
-//	printf("%10s%10d%10d%10d", this->name, this->velocity, this->scope, this->durability);
+	const int width = 10;
+	
+	cout<< setw(width) << left << this->name << right
+		<< setw(width) << this->velocity << " %c"
+		<< setw(width) << this->scope << " ly"
+		<< setw(width) << this->durability << " u";
 }
