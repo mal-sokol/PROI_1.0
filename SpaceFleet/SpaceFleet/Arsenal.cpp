@@ -2,17 +2,18 @@
 
 Arsenal::Arsenal()
 {
-	ifstream myFile( "arsenal.txt" );
+	fstream myFile;
+	myFile.open("arsenal.txt", std::ios::in | std::ios::out);
 	
 	int vInf, scInf, dInf, cValue;
 	string name;
 	
-	if(myFile.is_open()) {
+	if(myFile.good()) {
 		while(myFile >> name >> vInf >> scInf >> dInf >> cValue) {
 			Weapon weapon(name, vInf, scInf, dInf, cValue);
 			arsenal.push_back(weapon);
 		}
-			
+		myFile.close();
 	}
 	else {
 		cout << "Your arsenal is epmty" << endl;
@@ -26,7 +27,7 @@ Arsenal::~Arsenal()
 	unsigned int size = this->arsenal.size();
 	if(size) {
 		fstream myFile;
-		myFile.open("arsenal.txt", ios::out | ios::app);
+		myFile.open("arsenal.txt", ios::out | ios::trunc);
 		if(myFile.good()) {
 			for( unsigned int i = 0; i < size; i++ ) {
 				myFile << this->arsenal[i].getName() << ' '

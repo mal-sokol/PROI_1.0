@@ -7,7 +7,7 @@ int numLength(int);
 Weapon::Weapon() {
 	cout<< "Dziala domyslny konstruktor Weapon" <<endl;
 	srand( time( NULL ) );
-	this->name = "Random Weapon";
+	this->name = "Random";
 	this->velocityInfluence = -rand()%100;
 	this->scopeInfluence = -rand()%100;
 	this->durabilityInfluence = rand()%100 - 50;
