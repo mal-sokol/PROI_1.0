@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
@@ -35,7 +36,7 @@ public:
 
 	static int getNumberOfShips() {return numberOfShips;}
 	
-	void getInfo();
+	void display();
 
 };
 

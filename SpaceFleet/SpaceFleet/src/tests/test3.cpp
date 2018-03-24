@@ -15,8 +15,8 @@ int test3() {
 	Weapon Mistle("Mistle", -10, -10, -10, 3000);
 	Weapon AtomicBomb("Atomic bomb", -80, -50, -40, 7500);
 	
-	Mistle.getInfo();
-	AtomicBomb.getInfo();
+	Mistle.display();
+	AtomicBomb.display();
 	
 	return 0;
 }

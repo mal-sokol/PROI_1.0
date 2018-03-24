@@ -14,7 +14,7 @@ class Cargo : public Ship
 	static int numberOfCargo;
 	
 public:
-	void getInfo();
+	void display();
 	static int getNumberOfCargo() {return numberOfCargo;}
 	
 	Cargo();

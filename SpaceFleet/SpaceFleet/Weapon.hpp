@@ -1,5 +1,8 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -15,6 +18,7 @@ class Weapon
 	int combatValue;
 	
 public:
+	Weapon();
 	Weapon(string name, int velocityInfluence, int scopeInfluence, int durabilityInfluence, int combatValue);
 	~Weapon();
 
@@ -22,8 +26,9 @@ public:
 	int getVelocityInf() {return velocityInfluence;}
 	int getScopeInf() {return scopeInfluence;}
 	int getDurabilityInf() {return durabilityInfluence;}
+	int getCombatValue() {return combatValue;}
 	
-	void getInfo();
+	void display();
 
 };
 

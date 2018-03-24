@@ -25,17 +25,17 @@ int test2()
 		<< " typu bojowego." << endl << endl;
 		
 		
-	X.getInfo();
+	X.display();
 	cout<< endl;
-	Y.getInfo();
+	Y.display();
 	cout<< endl;
-	Z.getInfo();
+	Z.display();
 	cout<< endl;
-	NOT.getInfo();
+	NOT.display();
 	cout<< endl;
-	R.getInfo();
+	R.display();
 	cout<< endl;
-	Horror.getInfo();
+	Horror.display();
 	cout<< endl;
 		
 	return 0;

@@ -23,7 +23,7 @@ Cargo::~Cargo()
 {
 }
 
-void Cargo::getInfo() {
-	this->Ship::getInfo();
-	cout<< "capacity: " << this->capacity << " Mt" << endl;
+void Cargo::display() {
+	this->Ship::display();
+	cout<< "	capacity: " << this->capacity << " Mt";
 }

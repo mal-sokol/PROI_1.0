@@ -26,19 +26,19 @@ int test1()
 		<< " typu bojowego." << endl << endl;
 	
 
-	XR027.getInfo();
+	XR027.display();
 	cout << endl;
-	CHROM.getInfo();
+	CHROM.display();
 	cout << endl;
-	MIX.getInfo();
+	MIX.display();
 	cout << endl;
-	COS012.getInfo();
+	COS012.display();
 	cout << endl;
-	TAS001.getInfo();
+	TAS001.display();
 	cout << endl;
-	Attic001.getInfo();
+	Attic001.display();
 	cout << endl;
-	Attic002.getInfo();
+	Attic002.display();
 	cout << endl;
 	
 	return 0;

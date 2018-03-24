@@ -15,7 +15,7 @@ string shipFlex(int num) { //Odmiana slowa statek
 	return word;
 }
 
-string spacing(int length, int total) { //Zwraca odpowiednia liczbe spacji
+string spacing(int length, int total) { //Zwraca odpowiednia liczbe spacji do kolumnu tabeli o szerokosci total
 	
 	int i;
 	int left = total - length;
@@ -24,4 +24,19 @@ string spacing(int length, int total) { //Zwraca odpowiednia liczbe spacji
 	for(i=0; i<left; spacing = spacing + " ", i++);
 	
 	return spacing;
+}
+
+int numLength(int number) { //Zwraca ilosc cyfr liczby
+	
+	int n = 0;
+	
+	if(number<0)
+		n++;
+	
+	while((number) != 0) {
+		n++;
+		number = (int)(number*0.1);
+	}
+
+	return n;
 }
