@@ -4,9 +4,9 @@ string spacing(int, int);
 int numLength(int);
 
 
-Weapon::Weapon() {
+Weapon::Weapon(double help) {
 	cout<< "Dziala domyslny konstruktor Weapon" <<endl;
-	srand( time( NULL ) );
+	srand( time( NULL ) * help );
 	this->name = "Random";
 	this->velocityInfluence = -rand()%100;
 	this->scopeInfluence = -rand()%100;
@@ -29,7 +29,7 @@ Weapon::~Weapon()
 }
 
 void Weapon::display() {
-	int width = 6;
+	int width = 10;
 	
 	cout<< setw(width) << left << this->name << right
 		<< setw(width) << this->velocityInfluence

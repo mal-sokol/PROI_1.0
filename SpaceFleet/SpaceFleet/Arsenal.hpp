@@ -5,20 +5,20 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <iomanip>
 #include "Weapon.hpp"
 
 using namespace std;
 
-class Arsenal
+class Arsenal 
 {
-	vector <Weapon> arsenal;
-	
 public:
 	Arsenal();
 	~Arsenal();
 	void display();
-	void add(const Weapon& weapon);
-
+	void add(Weapon* weapon);
+private:
+	vector <Weapon*> arsenal;
 };
 
 #endif // ARSENAL_HPP

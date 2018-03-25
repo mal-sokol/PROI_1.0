@@ -1,3 +1,6 @@
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
+
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -5,9 +8,6 @@
 #include <ctime>
 
 using namespace std;
-
-#ifndef WEAPON_HPP
-#define WEAPON_HPP
 
 class Weapon
 {
@@ -18,7 +18,7 @@ class Weapon
 	int combatValue;
 	
 public:
-	Weapon();
+	Weapon(double help);
 	Weapon(string name, int velocityInfluence, int scopeInfluence, int durabilityInfluence, int combatValue);
 	~Weapon();
 
