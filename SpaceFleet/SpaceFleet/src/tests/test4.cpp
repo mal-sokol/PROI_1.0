@@ -14,15 +14,15 @@ int test4() {
 	
 	Arsenal myArsenal;
 	
-	Weapon newWeapon(3);
-	Weapon AI("AI", 100, -670, -200, 10000);
-	
-	Weapon nextWeapon(0.1);
-	
-	myArsenal.add(&newWeapon);
-	myArsenal.add(&nextWeapon);
-	myArsenal.add(&AI);
-	
+//	Weapon newWeapon(17);
+//	Weapon Balistic("Balistic", 68, -100, -60, 130);
+//	
+//	Weapon nextWeapon(0.1);
+//	
+//	myArsenal.add(&newWeapon);
+//	myArsenal.add(&nextWeapon);
+//	myArsenal.add(&Balistic);
+//	
 	myArsenal.display();
 	return 0;
 }
