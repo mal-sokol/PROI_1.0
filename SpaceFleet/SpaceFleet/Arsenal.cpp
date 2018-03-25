@@ -6,7 +6,7 @@ Arsenal::Arsenal()
 	fstream myFile;
 	myFile.open("arsenal.txt", std::ios::in | std::ios::out);
 	
-	int vInf, scInf, dInf, cValue;
+	double vInf, scInf, dInf, cValue;
 	string name;
 	
 	if(myFile.good()) {

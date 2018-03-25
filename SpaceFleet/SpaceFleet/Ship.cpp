@@ -14,7 +14,7 @@ Ship::Ship() {
 	Ship::numberOfShips++;
 }
 
-Ship::Ship(string name, int velocity, int scope, int durability) {
+Ship::Ship(string name, double velocity, double scope, double durability) {
 	
 	cout<< "Dziala konstruktor Ship"<< endl;
 	this->name = name;
@@ -33,12 +33,12 @@ Ship::~Ship()
 
 void Ship::display() {
 	
-	const int width = 7;
+	const int width = 10;
 	
-	cout<< setw(width) << left << this->name << right
-		<< setw(width) << this->velocity << " %c"
-		<< setw(width) << this->scope << " ly"
-		<< setw(width) << this->durability << " un"
+	cout<< setw(width-3) << left << this->name << right
+		<< setw(width-3) << this->velocity << " %c"
+		<< setw(width-3) << this->scope << " ly"
+		<< setw(width-3) << this->durability << " un"
 		<< setw(width) << this->formation;
 }
 
@@ -52,7 +52,7 @@ string Ship::formationToString() const {
 			myFormation = "matrix";
 			break;
 		case 3:
-			myFormation = "speare";
+			myFormation = "spear";
 			break;
 		case 4:
 			myFormation = "cube";

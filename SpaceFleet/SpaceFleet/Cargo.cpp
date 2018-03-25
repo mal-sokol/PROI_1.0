@@ -11,7 +11,7 @@ Cargo::Cargo() : Ship("StdCargo", 30, 1200, 50)
 	this->capacity = 1000;
 }
 
-Cargo::Cargo(string name, int velocity, int scope, int durability, int capacity) : Ship(name, velocity, scope, durability)
+Cargo::Cargo(string name, double velocity, double scope, double durability, double capacity) : Ship(name, velocity, scope, durability)
 {
 	cout<< "Dziala konstruktor Cargo"<< endl;
 	this->capacity = capacity;

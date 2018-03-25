@@ -12,21 +12,21 @@ using namespace std;
 class Weapon
 {
 	string name;
-	int velocityInfluence;
-	int scopeInfluence;
-	int durabilityInfluence;
-	int combatValue;
+	double velocityInfluence;
+	double scopeInfluence;
+	double durabilityInfluence;
+	double combatValue;
 	
 public:
 	Weapon(double help);
-	Weapon(string name, int velocityInfluence, int scopeInfluence, int durabilityInfluence, int combatValue);
+	Weapon(string name, double velocityInfluence, double scopeInfluence, double durabilityInfluence, double combatValue);
 	~Weapon();
 
 	string getName() {return name;}
-	int getVelocityInf() {return velocityInfluence;}
-	int getScopeInf() {return scopeInfluence;}
-	int getDurabilityInf() {return durabilityInfluence;}
-	int getCombatValue() {return combatValue;}
+	double getVelocityInf() {return velocityInfluence;}
+	double getScopeInf() {return scopeInfluence;}
+	double getDurabilityInf() {return durabilityInfluence;}
+	double getCombatValue() {return combatValue;}
 	
 	void display();
 

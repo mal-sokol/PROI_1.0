@@ -1,8 +1,5 @@
 #include "Weapon.hpp"
 
-string spacing(int, int);
-int numLength(int);
-
 
 Weapon::Weapon(double help) {
 	cout<< "Dziala domyslny konstruktor Weapon" <<endl;
@@ -14,7 +11,7 @@ Weapon::Weapon(double help) {
 	this->combatValue = 100 + rand()%900;
 }
 
-Weapon::Weapon(string name, int velocityInfluence, int scopeInfluence, int durabilityInfluence, int combatValue)
+Weapon::Weapon(string name, double velocityInfluence, double scopeInfluence, double durabilityInfluence, double combatValue)
 {
 	cout<< "Dziala konstruktor Weapon" <<endl;
 	this->name = name;
