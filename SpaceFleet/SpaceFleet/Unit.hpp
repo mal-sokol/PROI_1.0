@@ -1,31 +1,17 @@
+#ifndef UNIT_HPP
+#define UNIT_HPP
+
 #include <iostream>
 #include <string>
+#include <vector>
+#include <iomanip>
 #include "Ship.hpp"
 
 using namespace std;
 
-#ifndef UNIT_HPP
-#define UNIT_HPP
-
-class Element {
-	Ship * member;
-	int rank;
-	Element * next;
-	
-	static int numOfElements;
-	
-	friend class List;
-};
-
-class List {
-	Element * first;
-	
-	friend class Unit;
-};
-
 class Unit
 {
-	List shipsOfUnit;
+	vector <Ship> unit;
 	int numOfShips;
 	int velocity;
 	int manuverability;
@@ -38,6 +24,13 @@ class Unit
 public:
 	Unit();
 	~Unit();
+	void display();
+	void add(const Ship& member);
+	
+	int getVelocity();
+	int getManuverability();
+	int getScope();
+	int getDurability();
 
 };
 

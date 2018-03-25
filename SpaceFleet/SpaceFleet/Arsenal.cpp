@@ -2,6 +2,7 @@
 
 Arsenal::Arsenal()
 {
+	Weapon* newWeapon = NULL;
 	fstream myFile;
 	myFile.open("arsenal.txt", std::ios::in | std::ios::out);
 	
@@ -10,14 +11,13 @@ Arsenal::Arsenal()
 	
 	if(myFile.good()) {
 		while(myFile >> name >> vInf >> scInf >> dInf >> cValue) {
-			Weapon weapon(name, vInf, scInf, dInf, cValue);
-			arsenal.push_back(weapon);
+			newWeapon = new Weapon(name, vInf, scInf, dInf, cValue);
+			arsenal.push_back(newWeapon);
 		}
 		myFile.close();
 	}
 	else {
 		cout << "Your arsenal is epmty" << endl;
-		vector <Weapon> arsenal;
 	}
 }
 
@@ -30,11 +30,11 @@ Arsenal::~Arsenal()
 		myFile.open("arsenal.txt", ios::out | ios::trunc);
 		if(myFile.good()) {
 			for( unsigned int i = 0; i < size; i++ ) {
-				myFile << this->arsenal[i].getName() << ' '
-						<< this->arsenal[i].getVelocityInf() << ' '
-						<< this->arsenal[i].getScopeInf() << ' '
-						<< this->arsenal[i].getDurabilityInf() << ' '
-						<< this->arsenal[i].getCombatValue() <<endl;
+				myFile << this->arsenal[i]->getName() << ' '
+						<< this->arsenal[i]->getVelocityInf() << ' '
+						<< this->arsenal[i]->getScopeInf() << ' '
+						<< this->arsenal[i]->getDurabilityInf() << ' '
+						<< this->arsenal[i]->getCombatValue() <<endl;
 				}
 			myFile.close();
 		}
@@ -51,9 +51,10 @@ void Arsenal::display()
 {
 	unsigned int size = this->arsenal.size();
 	if(size) {
+		cout << "     NAME      VELOCITY  SCOPE     DURABILITY COMBAT VALUE" << endl;
 		for( unsigned int i = 0; i < size; i++ ) {
-			cout << i+1 << ". ";
-			this->arsenal[i].display();
+			cout << setw(3) << i+1 << ". ";
+			this->arsenal[i]->display();
 		}
 	}
 	else {
@@ -61,6 +62,6 @@ void Arsenal::display()
 	}
 }
 
-void Arsenal::add(const Weapon& weapon) {
+void Arsenal::add(Weapon* weapon) {
 	this->arsenal.push_back(weapon);
 }

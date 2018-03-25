@@ -9,6 +9,7 @@ Ship::Ship() {
 	this->velocity = 50;
 	this->scope = 1000;
 	this->durability = 50;
+	this->formation = none;
 	
 	Ship::numberOfShips++;
 }
@@ -20,6 +21,7 @@ Ship::Ship(string name, int velocity, int scope, int durability) {
 	this->velocity = velocity;
 	this->scope = scope;
 	this->durability = durability;
+	this->formation = none;
 	
 	Ship::numberOfShips++;
 }
@@ -36,5 +38,6 @@ void Ship::display() {
 	cout<< setw(width) << left << this->name << right
 		<< setw(width) << this->velocity << " %c"
 		<< setw(width) << this->scope << " ly"
-		<< setw(width) << this->durability << " u";
+		<< setw(width) << this->durability << " u"
+		<< setw(width) << this->formation;
 }
