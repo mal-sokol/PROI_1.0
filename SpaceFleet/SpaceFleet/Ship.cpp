@@ -33,11 +33,33 @@ Ship::~Ship()
 
 void Ship::display() {
 	
-	const int width = 10;
+	const int width = 7;
 	
 	cout<< setw(width) << left << this->name << right
 		<< setw(width) << this->velocity << " %c"
 		<< setw(width) << this->scope << " ly"
-		<< setw(width) << this->durability << " u"
+		<< setw(width) << this->durability << " un"
 		<< setw(width) << this->formation;
+}
+
+string Ship::formationToString() const {
+	string myFormation;
+	switch(this->formation) {
+		case 1:
+			myFormation = "line";
+			break;
+		case 2:
+			myFormation = "matrix";
+			break;
+		case 3:
+			myFormation = "speare";
+			break;
+		case 4:
+			myFormation = "cube";
+			break;
+		default:
+			myFormation = "-";
+			break;
+	}
+	return myFormation;
 }

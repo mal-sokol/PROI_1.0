@@ -22,51 +22,71 @@ Combat::Combat(string name, int velocity, int scope, int durability, int combatV
 
 Combat::~Combat()
 {
+	this->loseWeapon();
+}
+
+void Combat::getWeapon(Weapon* ptr) {
+	this->weapon = ptr;
+}
+
+void Combat::loseWeapon() {
+	if(this->weapon) {
+		this->weapon = NULL;
+	}
 }
 
 void Combat::display() {
-	this->Ship::display();
-	cout<< "	combat value: " << this->combatValue;
-	if(this->weapon)
+	const int width = 7;
+	
+	cout<< setw(width) << left << this->getName() << right
+		<< setw(width) << this->getVelocity() << " %c"
+		<< setw(width) << this->getScope() << " ly"
+		<< setw(width) << this->getDurability() << " un"
+		<< setw(width) << this->formationToString()
+		<< "	combat value: " << this->getCombatValue();
+	if(this->weapon) {
 		cout<< "	equiped with: " << (*this->weapon).getName();
+	}
+	cout << endl;
 }
 
 int Combat::getVelocity() const {
-	int velocity = this->getVelocity();
-	int influence = this->weapon->getVelocityInf();
+	int velocity = this->Ship::getVelocity();
+	int influence = 0;
 	
 	if(this->weapon) {
+		influence = this->weapon->getVelocityInf();
 		return (velocity + influence);
 	}
 	else return velocity;
 }
 
 int Combat::getScope() const {
-	int scope = this->getScope();
-	int influence = this->weapon->getScopeInf();
+	int scope = this->Ship::getScope();
+	int influence = 0;
 	
 	if(this->weapon) {
-		return (scope + influence);
+		influence = this->weapon->getScopeInf();
 	}
-	else return scope;
+	return (scope + influence);
 }
 
 int Combat::getDurability() const {
-	int durability = this->getDurability();
-	int influence = this->weapon->getDurabilityInf();
+	int durability = this->Ship::getDurability();
+	int influence = 0;
 	
 	if(this->weapon) {
-		return (durability + influence);
+		influence = this->weapon->getDurabilityInf();
 	}
-	else return durability;
+	return (durability + influence);
 }
 
 int Combat::getCombatValue() const {
-	int combatValue = this->getCombatValue();
-	int bonus = this->weapon->getCombatValue();
+	int combatValue = this->combatValue;
+	int bonus = 0;
 	
 	if(this->weapon) {
-		return (combatValue + bonus);
+		bonus = this->weapon->getCombatValue();
 	}
-	else return combatValue;
+	return (combatValue + bonus);
 }

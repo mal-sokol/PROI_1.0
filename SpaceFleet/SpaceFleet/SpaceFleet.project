@@ -102,6 +102,7 @@
     <File Name="Combat.cpp"/>
     <File Name="fun.cpp"/>
     <VirtualDirectory Name="tests">
+      <File Name="src/tests/test5.cpp"/>
       <File Name="src/tests/test4.cpp"/>
       <File Name="src/tests/test3.cpp"/>
       <File Name="test2.cpp"/>
