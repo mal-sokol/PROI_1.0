@@ -49,9 +49,17 @@ Arsenal::~Arsenal()
 
 void Arsenal::display() 
 {
+	int width = 12;
 	unsigned int size = this->arsenal.size();
 	if(size) {
-		cout << "     NAME      VELOCITY  SCOPE     DURABILITY COMBAT VALUE" << endl;
+			cout<< setw(5*width + 5) << right << "COMBAT" << endl <<  "     "
+				<< setw(width) << left << "NAME" << right
+				<< setw(width) << "VELOCITY"
+				<< setw(width) << "SCOPE"
+				<< setw(width) << "DURABILITY"
+				<< setw(width) << "VALUE" << endl
+				<< setfill('-') << setw(5*width + 5) << '-' << setfill(' ') << endl;
+				
 		for( unsigned int i = 0; i < size; i++ ) {
 			cout << setw(3) << i+1 << ". ";
 			this->arsenal[i]->display();

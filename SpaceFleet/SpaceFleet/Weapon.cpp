@@ -29,7 +29,7 @@ Weapon::~Weapon()
 }
 
 void Weapon::display() {
-	int width = 10;
+	int width = 12;
 	
 	cout<< setw(width) << left << this->name << right
 		<< setw(width) << this->velocityInfluence
