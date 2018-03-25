@@ -11,7 +11,7 @@ Combat::Combat() : Ship("StdCombat", 70, 750, 70)
 	this->weapon = NULL;
 }
 
-Combat::Combat(string name, int velocity, int scope, int durability, int combatValue) : Ship(name, velocity, scope, durability)
+Combat::Combat(string name, double velocity, double scope, double durability, double combatValue) : Ship(name, velocity, scope, durability)
 {
 	cout<< "Dziala domyslny konstruktor Combat"<< endl;
 	this->combatValue = combatValue;
@@ -50,9 +50,9 @@ void Combat::display() {
 	cout << endl;
 }
 
-int Combat::getVelocity() const {
-	int velocity = this->Ship::getVelocity();
-	int influence = 0;
+double Combat::getVelocity() const {
+	double velocity = this->Ship::getVelocity();
+	double influence = 0;
 	
 	if(this->weapon) {
 		influence = this->weapon->getVelocityInf();
@@ -61,9 +61,9 @@ int Combat::getVelocity() const {
 	else return velocity;
 }
 
-int Combat::getScope() const {
-	int scope = this->Ship::getScope();
-	int influence = 0;
+double Combat::getScope() const {
+	double scope = this->Ship::getScope();
+	double influence = 0;
 	
 	if(this->weapon) {
 		influence = this->weapon->getScopeInf();
@@ -71,9 +71,9 @@ int Combat::getScope() const {
 	return (scope + influence);
 }
 
-int Combat::getDurability() const {
-	int durability = this->Ship::getDurability();
-	int influence = 0;
+double Combat::getDurability() const {
+	double durability = this->Ship::getDurability();
+	double influence = 0;
 	
 	if(this->weapon) {
 		influence = this->weapon->getDurabilityInf();
@@ -81,9 +81,9 @@ int Combat::getDurability() const {
 	return (durability + influence);
 }
 
-int Combat::getCombatValue() const {
-	int combatValue = this->combatValue;
-	int bonus = 0;
+double Combat::getCombatValue() const {
+	double combatValue = this->combatValue;
+	double bonus = 0;
 	
 	if(this->weapon) {
 		bonus = this->weapon->getCombatValue();

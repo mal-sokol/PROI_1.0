@@ -14,10 +14,10 @@ public:
 	static int getNumberOfCargo() {return numberOfCargo;}
 	
 	Cargo();
-	Cargo(string name, int velocity = 30, int scope = 1200, int durability = 50, int capacity = 1000);
+	Cargo(string name, double velocity = 30, double scope = 1200, double durability = 50, double capacity = 1000);
 	~Cargo();
 private:
-	int capacity;
+	double capacity;
 	static int numberOfCargo;
 };
 

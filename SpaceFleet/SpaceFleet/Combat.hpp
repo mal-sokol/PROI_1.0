@@ -17,16 +17,16 @@ public:
 	void loseWeapon();
 	
 	static int getNumberOfCombat() {return numberOfCombat;}
-	int getVelocity() const;
-	int getScope() const;
-	int getDurability() const;
-	int getCombatValue() const;
+	double getVelocity() const;
+	double getScope() const;
+	double getDurability() const;
+	double getCombatValue() const;
 	
 	Combat();
-	Combat(string name, int velocity = 70, int scope = 750, int durability = 70, int combatValue = 100);
+	Combat(string name, double velocity = 70, double scope = 750, double durability = 70, double combatValue = 100);
 	~Combat();
 private:
-	int combatValue;
+	double combatValue;
 	Weapon * weapon;
 	
 	static int numberOfCombat;
