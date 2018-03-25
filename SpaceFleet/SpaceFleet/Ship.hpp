@@ -23,6 +23,7 @@ public:
 	int getScope() const {return scope;}
 	int getDurability() const {return durability;}
 	formationType getFormation() const {return formation;}
+	string formationToString() const;
 	
 	void setName(string name) {this->name = name;}
 	void setVelocity(int velocity) {this->velocity = velocity;}

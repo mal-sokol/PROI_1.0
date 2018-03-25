@@ -5,6 +5,7 @@
 #include <string>
 #include "Ship.hpp"
 #include "Weapon.hpp"
+#include "Arsenal.hpp"
 
 using namespace std;
 
@@ -12,7 +13,8 @@ class Combat : public Ship
 {
 public:
 	void display();
-	void getWeapon();
+	void getWeapon(Weapon* weapon);
+	void loseWeapon();
 	
 	static int getNumberOfCombat() {return numberOfCombat;}
 	int getVelocity() const;

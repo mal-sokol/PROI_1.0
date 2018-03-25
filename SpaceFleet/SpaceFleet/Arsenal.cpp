@@ -35,6 +35,7 @@ Arsenal::~Arsenal()
 						<< this->arsenal[i]->getScopeInf() << ' '
 						<< this->arsenal[i]->getDurabilityInf() << ' '
 						<< this->arsenal[i]->getCombatValue() <<endl;
+				delete this->arsenal[i];
 				}
 			myFile.close();
 		}
