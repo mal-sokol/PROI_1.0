@@ -16,7 +16,7 @@ public:
 	void getWeapon(Weapon* weapon);
 	void loseWeapon();
 	
-	static int getNumberOfCombat() {return numberOfCombat;}
+	static unsigned int getNumberOfCombat() {return numberOfCombat;}
 	double getVelocity() const;
 	double getScope() const;
 	double getDurability() const;
@@ -29,7 +29,7 @@ private:
 	double combatValue;
 	Weapon * weapon;
 	
-	static int numberOfCombat;
+	static unsigned int numberOfCombat;
 };
 
 #endif // COMBAT_HPP

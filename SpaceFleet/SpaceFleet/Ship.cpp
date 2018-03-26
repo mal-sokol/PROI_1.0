@@ -1,6 +1,6 @@
 #include "Ship.hpp"
 
-int Ship::numberOfShips = 0;
+unsigned int Ship::numberOfShips = 0;
 
 Ship::Ship() {
 	
@@ -33,13 +33,14 @@ Ship::~Ship()
 
 void Ship::display() {
 	
-	const int width = 10;
+	const int width = 12;
 	
-	cout<< setw(width-3) << left << this->name << right
+	cout.precision(2);
+	cout<< setw(width) << left << this->name << right
 		<< setw(width-3) << this->velocity << " %c"
 		<< setw(width-3) << this->scope << " ly"
 		<< setw(width-3) << this->durability << " un"
-		<< setw(width) << this->formation;
+		<< setw(width) << this->formationToString();
 }
 
 string Ship::formationToString() const {

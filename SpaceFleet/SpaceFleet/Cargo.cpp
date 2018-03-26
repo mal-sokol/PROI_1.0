@@ -1,6 +1,6 @@
 #include "Cargo.hpp"
 
-int Cargo::numberOfCargo = 0;
+unsigned int Cargo::numberOfCargo = 0;
 
 Cargo::Cargo() : Ship("StdCargo", 30, 1200, 50)
 {
@@ -25,5 +25,5 @@ Cargo::~Cargo()
 
 void Cargo::display() {
 	this->Ship::display();
-	cout<< "	capacity: " << this->capacity << " Mt";
+	cout<< "  capacity: " << this->capacity << " Mt";
 }
