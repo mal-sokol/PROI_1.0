@@ -13,9 +13,13 @@ int test2();
 int test3();
 int test4();
 int test5();
+int test6();
 
 int main() {
 	
-	test5();
+	int test;
+	cout << fixed;
+	test = test6();
+	cout << "Wynik testu: " << test << endl;
 	return 0;
 }

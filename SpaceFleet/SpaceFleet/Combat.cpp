@@ -1,6 +1,6 @@
 #include "Combat.hpp"
 
-int Combat::numberOfCombat = 0;
+unsigned int Combat::numberOfCombat = 0;
 
 Combat::Combat() : Ship("StdCombat", 70, 750, 70)
 {
@@ -36,18 +36,12 @@ void Combat::loseWeapon() {
 }
 
 void Combat::display() {
-	const int width = 7;
 	
-	cout<< setw(width) << left << this->getName() << right
-		<< setw(width) << this->getVelocity() << " %c"
-		<< setw(width) << this->getScope() << " ly"
-		<< setw(width) << this->getDurability() << " un"
-		<< setw(width) << this->formationToString()
-		<< "	combat value: " << this->getCombatValue();
+	this->Ship::display();
+	cout<< "  combat value: " << this->getCombatValue();
 	if(this->weapon) {
-		cout<< "	equiped with: " << (*this->weapon).getName();
+		cout<< "  equiped with: " << (*this->weapon).getName();
 	}
-	cout << endl;
 }
 
 double Combat::getVelocity() const {
