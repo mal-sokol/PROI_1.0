@@ -1,7 +1,6 @@
 #include "Arsenal.hpp"
 
-Arsenal::Arsenal()
-{
+Arsenal::Arsenal() {
 	Weapon* newWeapon = NULL;
 	fstream myFile;
 	myFile.open("arsenal.txt", std::ios::in | std::ios::out);
@@ -21,9 +20,16 @@ Arsenal::Arsenal()
 	}
 }
 
+Arsenal::Arsenal(const Arsenal& toCopyFrom) {
+	for(unsigned int i = 0; i < toCopyFrom.arsenal.size(); i++) {
+		Weapon& ref = *toCopyFrom.arsenal[i];
+		Weapon* ptr = new Weapon(ref);
+		this->arsenal.push_back(ptr);
+	}
+	
+}
 
-Arsenal::~Arsenal()
-{
+Arsenal::~Arsenal() {
 	unsigned int size = this->arsenal.size();
 	if(size) {
 		fstream myFile;
@@ -44,6 +50,7 @@ Arsenal::~Arsenal()
 		}
 		this->arsenal.clear();
 	}
+	cout << "~Arsenal(): uruchomiono" << std::endl;
 
 }
 
@@ -73,4 +80,12 @@ void Arsenal::display()
 
 void Arsenal::add(Weapon* weapon) {
 	this->arsenal.push_back(weapon);
+}
+
+Weapon* Arsenal::getWeapon(unsigned int chosen) {
+	unsigned int size = arsenal.size();
+	if((chosen-1) < size) {
+		return arsenal[chosen-1];
+	}
+	else return NULL;
 }

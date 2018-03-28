@@ -12,6 +12,12 @@ using namespace std;
 class Combat : public Ship
 {
 public:
+	Combat();
+	Combat(const Combat& toCopyFrom);
+	Combat(string name, double velocity = 70, double scope = 750, double durability = 70, double combatValue = 100);
+	~Combat();
+	Combat& operator= (const Combat& other);
+	
 	void display();
 	void getWeapon(Weapon* weapon);
 	void loseWeapon();
@@ -22,9 +28,6 @@ public:
 	double getDurability() const;
 	double getCombatValue() const;
 	
-	Combat();
-	Combat(string name, double velocity = 70, double scope = 750, double durability = 70, double combatValue = 100);
-	~Combat();
 private:
 	double combatValue;
 	Weapon * weapon;

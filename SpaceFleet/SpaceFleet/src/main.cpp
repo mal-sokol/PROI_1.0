@@ -14,12 +14,10 @@ int test3();
 int test4();
 int test5();
 int test6();
+int test7();
 
 int main() {
 	
-	int test;
-	cout << fixed;
-	test = test6();
-	cout << "Wynik testu: " << test << endl;
+	test7();
 	return 0;
 }

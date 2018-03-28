@@ -11,13 +11,9 @@ using namespace std;
 
 class Weapon
 {
-	string name;
-	double velocityInfluence;
-	double scopeInfluence;
-	double durabilityInfluence;
-	double combatValue;
-	
 public:
+	Weapon();
+	Weapon(const Weapon& toCopyFrom);
 	Weapon(double help);
 	Weapon(string name, double velocityInfluence, double scopeInfluence, double durabilityInfluence, double combatValue);
 	~Weapon();
@@ -27,9 +23,15 @@ public:
 	double getScopeInf() {return scopeInfluence;}
 	double getDurabilityInf() {return durabilityInfluence;}
 	double getCombatValue() {return combatValue;}
-	
 	void display();
-
+	
+private:
+	string name;
+	double velocityInfluence;
+	double scopeInfluence;
+	double durabilityInfluence;
+	double combatValue;
+	
 };
 
 #endif // WEAPON_HPP

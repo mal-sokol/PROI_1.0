@@ -14,9 +14,13 @@ class Arsenal
 {
 public:
 	Arsenal();
+	Arsenal(const Arsenal & toCopyFrom);
 	~Arsenal();
+	
 	void display();
 	void add(Weapon* weapon);
+	Weapon* getWeapon(unsigned int i);
+	
 private:
 	vector <Weapon*> arsenal;
 };

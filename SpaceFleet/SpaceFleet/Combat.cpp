@@ -2,8 +2,7 @@
 
 unsigned int Combat::numberOfCombat = 0;
 
-Combat::Combat() : Ship("StdCombat", 70, 750, 70)
-{
+Combat::Combat() : Ship("StdCombat", 70, 750, 70) {
 	cout<< "Dziala domyslny konstruktor Combat"<< endl;
 	Combat::numberOfCombat++;
 	
@@ -11,8 +10,7 @@ Combat::Combat() : Ship("StdCombat", 70, 750, 70)
 	this->weapon = NULL;
 }
 
-Combat::Combat(string name, double velocity, double scope, double durability, double combatValue) : Ship(name, velocity, scope, durability)
-{
+Combat::Combat(string name, double velocity, double scope, double durability, double combatValue) : Ship(name, velocity, scope, durability) {
 	cout<< "Dziala domyslny konstruktor Combat"<< endl;
 	this->combatValue = combatValue;
 	this->weapon = NULL;
@@ -20,9 +18,16 @@ Combat::Combat(string name, double velocity, double scope, double durability, do
 	Combat::numberOfCombat++;
 }
 
+Combat::Combat(const Combat& toCopyFrom) : Ship(toCopyFrom) {
+	combatValue = toCopyFrom.combatValue;
+	weapon = NULL;
+}
+
 Combat::~Combat()
 {
 	this->loseWeapon();
+	cout << "~Combat(): uruchomiono" << std::endl;
+
 }
 
 void Combat::getWeapon(Weapon* ptr) {
@@ -83,4 +88,21 @@ double Combat::getCombatValue() const {
 		bonus = this->weapon->getCombatValue();
 	}
 	return (combatValue + bonus);
+}
+
+Combat& Combat::operator= (const Combat& other){
+	if(this != &other) {
+		this->setName(other.getName());
+		this->setVelocity(other.getVelocity());
+		this->setScope(other.getScope());
+		this->setDurability(other.getDurability());
+		this->setFormation(other.getFormation());
+		combatValue = other.combatValue;
+		if(other.weapon) {
+			Weapon* ptr = new Weapon(*other.weapon);
+			weapon = ptr;
+		}
+		else weapon = NULL;
+	}
+	return *this;
 }
