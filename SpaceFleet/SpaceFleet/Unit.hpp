@@ -20,6 +20,7 @@ public:
 	void display();
 	void displayMembers();
 	void add(Ship* member);
+	Unit& operator= (const Unit& other);
 	
 	void setName(string name) {this->name = name;}
 	void setVelocity();
@@ -40,6 +41,7 @@ public:
 	double getCombatValue() const {return combatValue;}
 	double getCapacity() const {return capacity;}
 	static int getNumOfUnits() {return numOfUnits;}
+	Ship* getShip(unsigned int chosen);
 
 private:
 	vector <Ship*> unit;

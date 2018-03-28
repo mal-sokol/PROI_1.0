@@ -93,6 +93,10 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="Menu.cpp"/>
+    <File Name="Menu.hpp"/>
+    <File Name="src/Fleet.cpp"/>
+    <File Name="src/Fleet.hpp"/>
     <File Name="Arsenal.hpp"/>
     <File Name="Arsenal.cpp"/>
     <File Name="src/main.cpp"/>
@@ -102,6 +106,7 @@
     <File Name="Combat.cpp"/>
     <File Name="fun.cpp"/>
     <VirtualDirectory Name="tests">
+      <File Name="src/tests/test7.cpp"/>
       <File Name="src/tests/test6.cpp"/>
       <File Name="src/tests/test5.cpp"/>
       <File Name="src/tests/test4.cpp"/>

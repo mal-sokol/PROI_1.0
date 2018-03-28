@@ -1,5 +1,6 @@
 #include "Weapon.hpp"
 
+Weapon::Weapon() {}
 
 Weapon::Weapon(double help) {
 	cout<< "Dziala domyslny konstruktor Weapon" <<endl;
@@ -21,6 +22,14 @@ Weapon::Weapon(string name, double velocityInfluence, double scopeInfluence, dou
 	this->combatValue = combatValue;
 }
 
+Weapon::Weapon(const Weapon& toCopyFrom) {
+	name = toCopyFrom.name;
+	velocityInfluence = toCopyFrom.velocityInfluence;
+	scopeInfluence = toCopyFrom.scopeInfluence;
+	durabilityInfluence = toCopyFrom.durabilityInfluence;
+	combatValue =toCopyFrom.combatValue;
+}
+
 Weapon::~Weapon()
 {
 }
@@ -35,3 +44,10 @@ void Weapon::display() {
 		<< setw(width) << this->combatValue <<endl;
 }
 
+//Weapon& operator= (const Weapon& other) {
+//	
+//	if(this != &other) {
+//		
+//	}
+//	return *this;
+//}

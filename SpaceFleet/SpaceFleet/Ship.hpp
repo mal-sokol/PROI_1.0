@@ -15,13 +15,16 @@ class Ship
 {
 public:
 	Ship();
+	Ship(const Ship& toCopyFrom);
 	Ship(string name, double velocity = 50, double scope = 1000, double durability = 50);
 	virtual ~Ship();
+	Ship& operator= (const Ship& other);
 	
 	string getName() const {return name;}
 	double getVelocity() const {return velocity;}
 	double getScope() const {return scope;}
 	double getDurability() const {return durability;}
+	
 	virtual double getCombatValue() const {
 		cout << "Dziala Ship::getCombatValue" << endl;
 		return 0;
@@ -30,6 +33,7 @@ public:
 		cout << "Dziala Ship::getCapacity" << endl;
 		return 0;
 	} 
+	
 	formationType getFormation() const {return formation;}
 	string formationToString() const;
 	

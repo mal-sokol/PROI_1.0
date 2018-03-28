@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet.workspace">
-  <int Value="5" Name="m_selectedTab"/>
+  <int Value="20" Name="m_selectedTab"/>
   <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Ship.hpp" Name="FileName"/>
-      <int Value="23" Name="FirstVisibleLine"/>
-      <int Value="33" Name="CurrentLine"/>
+      <int Value="32" Name="FirstVisibleLine"/>
+      <int Value="53" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Ship.cpp" Name="FileName"/>
-      <int Value="28" Name="FirstVisibleLine"/>
-      <int Value="35" Name="CurrentLine"/>
+      <int Value="70" Name="FirstVisibleLine"/>
+      <int Value="85" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Unit.cpp" Name="FileName"/>
+      <int Value="270" Name="FirstVisibleLine"/>
+      <int Value="282" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -25,65 +32,58 @@
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\fun.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Cargo.hpp" Name="FileName"/>
       <int Value="9" Name="FirstVisibleLine"/>
-      <int Value="4" Name="CurrentLine"/>
+      <int Value="23" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Cargo.cpp" Name="FileName"/>
-      <int Value="12" Name="FirstVisibleLine"/>
-      <int Value="25" Name="CurrentLine"/>
+      <int Value="19" Name="FirstVisibleLine"/>
+      <int Value="29" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Combat.hpp" Name="FileName"/>
-      <int Value="18" Name="FirstVisibleLine"/>
-      <int Value="28" Name="CurrentLine"/>
+      <int Value="12" Name="FirstVisibleLine"/>
+      <int Value="18" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Combat.cpp" Name="FileName"/>
-      <int Value="30" Name="FirstVisibleLine"/>
-      <int Value="38" Name="CurrentLine"/>
+      <int Value="18" Name="FirstVisibleLine"/>
+      <int Value="99" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\test2.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="21" Name="FirstVisibleLine"/>
       <int Value="27" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\src\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="19" Name="CurrentLine"/>
+      <int Value="11" Name="FirstVisibleLine"/>
+      <int Value="22" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Weapon.hpp" Name="FileName"/>
-      <int Value="18" Name="FirstVisibleLine"/>
-      <int Value="35" Name="CurrentLine"/>
+      <int Value="6" Name="FirstVisibleLine"/>
+      <int Value="15" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Weapon.cpp" Name="FileName"/>
-      <int Value="30" Name="FirstVisibleLine"/>
-      <int Value="20" Name="CurrentLine"/>
+      <int Value="13" Name="FirstVisibleLine"/>
+      <int Value="24" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -96,15 +96,8 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Unit.hpp" Name="FileName"/>
-      <int Value="15" Name="FirstVisibleLine"/>
-      <int Value="20" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Unit.cpp" Name="FileName"/>
-      <int Value="41" Name="FirstVisibleLine"/>
-      <int Value="48" Name="CurrentLine"/>
+      <int Value="30" Name="FirstVisibleLine"/>
+      <int Value="43" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -117,15 +110,15 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Arsenal.hpp" Name="FileName"/>
-      <int Value="10" Name="FirstVisibleLine"/>
-      <int Value="13" Name="CurrentLine"/>
+      <int Value="6" Name="FirstVisibleLine"/>
+      <int Value="20" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Arsenal.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="8" Name="CurrentLine"/>
+      <int Value="73" Name="FirstVisibleLine"/>
+      <int Value="84" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -138,17 +131,31 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\src\tests\test6.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="61" Name="CurrentLine"/>
+      <int Value="18" Name="FirstVisibleLine"/>
+      <int Value="23" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\src\Fleet.hpp" Name="FileName"/>
+      <int Value="18" Name="FirstVisibleLine"/>
+      <int Value="30" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\src\Fleet.cpp" Name="FileName"/>
+      <int Value="43" Name="FirstVisibleLine"/>
+      <int Value="55" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
   </TabInfoArray>
   <SerializedObject Name="m_breakpoints">
-    <long Value="7" Name="Count"/>
+    <long Value="4" Name="Count"/>
     <SerializedObject Name="Breakpoint0">
-      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Arsenal.cpp" Name="file"/>
-      <int Value="12" Name="lineno"/>
+      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Unit.cpp" Name="file"/>
+      <int Value="200" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
       <int Value="1" Name="bp_type"/>
@@ -163,8 +170,8 @@
       <int Value="0" Name="origin"/>
     </SerializedObject>
     <SerializedObject Name="Breakpoint1">
-      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Arsenal.cpp" Name="file"/>
-      <int Value="32" Name="lineno"/>
+      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Unit.cpp" Name="file"/>
+      <int Value="206" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
       <int Value="1" Name="bp_type"/>
@@ -179,8 +186,8 @@
       <int Value="0" Name="origin"/>
     </SerializedObject>
     <SerializedObject Name="Breakpoint2">
-      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Weapon.cpp" Name="file"/>
-      <int Value="28" Name="lineno"/>
+      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Unit.cpp" Name="file"/>
+      <int Value="225" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
       <int Value="1" Name="bp_type"/>
@@ -195,56 +202,8 @@
       <int Value="0" Name="origin"/>
     </SerializedObject>
     <SerializedObject Name="Breakpoint3">
-      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Weapon.cpp" Name="file"/>
-      <int Value="31" Name="lineno"/>
-      <wxString Value="" Name="function_name"/>
-      <wxString Value="" Name="memory_address"/>
-      <int Value="1" Name="bp_type"/>
-      <int Value="0" Name="watchpoint_type"/>
-      <wxString Value="" Name="watchpt_data"/>
-      <CData Name="commandlist"/>
-      <bool Value="0" Name="regex"/>
-      <bool Value="0" Name="is_temp"/>
-      <bool Value="1" Name="is_enabled"/>
-      <int Value="0" Name="ignore_number"/>
-      <wxString Value="" Name="conditions"/>
-      <int Value="0" Name="origin"/>
-    </SerializedObject>
-    <SerializedObject Name="Breakpoint4">
-      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\fun.cpp" Name="file"/>
-      <int Value="18" Name="lineno"/>
-      <wxString Value="" Name="function_name"/>
-      <wxString Value="" Name="memory_address"/>
-      <int Value="1" Name="bp_type"/>
-      <int Value="0" Name="watchpoint_type"/>
-      <wxString Value="" Name="watchpt_data"/>
-      <CData Name="commandlist"/>
-      <bool Value="0" Name="regex"/>
-      <bool Value="0" Name="is_temp"/>
-      <bool Value="1" Name="is_enabled"/>
-      <int Value="0" Name="ignore_number"/>
-      <wxString Value="" Name="conditions"/>
-      <int Value="0" Name="origin"/>
-    </SerializedObject>
-    <SerializedObject Name="Breakpoint5">
-      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\fun.cpp" Name="file"/>
-      <int Value="24" Name="lineno"/>
-      <wxString Value="" Name="function_name"/>
-      <wxString Value="" Name="memory_address"/>
-      <int Value="1" Name="bp_type"/>
-      <int Value="0" Name="watchpoint_type"/>
-      <wxString Value="" Name="watchpt_data"/>
-      <CData Name="commandlist"/>
-      <bool Value="0" Name="regex"/>
-      <bool Value="0" Name="is_temp"/>
-      <bool Value="1" Name="is_enabled"/>
-      <int Value="0" Name="ignore_number"/>
-      <wxString Value="" Name="conditions"/>
-      <int Value="0" Name="origin"/>
-    </SerializedObject>
-    <SerializedObject Name="Breakpoint6">
-      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\fun.cpp" Name="file"/>
-      <int Value="29" Name="lineno"/>
+      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Unit.cpp" Name="file"/>
+      <int Value="230" Name="lineno"/>
       <wxString Value="" Name="function_name"/>
       <wxString Value="" Name="memory_address"/>
       <int Value="1" Name="bp_type"/>

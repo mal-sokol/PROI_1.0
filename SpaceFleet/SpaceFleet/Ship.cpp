@@ -14,6 +14,14 @@ Ship::Ship() {
 	Ship::numberOfShips++;
 }
 
+Ship::Ship(const Ship& toCopyFrom) {
+	name = toCopyFrom.name;
+	velocity = toCopyFrom.velocity;
+	scope = toCopyFrom.scope;
+	durability = toCopyFrom.durability;
+	formation = toCopyFrom.formation;
+}
+
 Ship::Ship(string name, double velocity, double scope, double durability) {
 	
 	cout<< "Dziala konstruktor Ship"<< endl;
@@ -28,6 +36,7 @@ Ship::Ship(string name, double velocity, double scope, double durability) {
 
 Ship::~Ship()
 {
+	cout << "~Ship(): uruchomiono" << std::endl;
 }
 
 
@@ -63,4 +72,15 @@ string Ship::formationToString() const {
 			break;
 	}
 	return myFormation;
+}
+
+Ship& Ship::operator= (const Ship& other) {
+	if(this != &other) {
+		name = other.name;
+		velocity = other.velocity;
+		scope = other.scope;
+		durability = other.durability;
+		formation = other.formation;
+	}
+	return *this;
 }

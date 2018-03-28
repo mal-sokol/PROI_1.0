@@ -26,7 +26,7 @@ Unit::~Unit() {
 			cout << this->unit[i]->getName() << " destroyed" << endl;
 			delete this->unit[i];
 		}
-	this->unit.clear();
+		this->unit.clear();
 	}
 }
 
@@ -250,76 +250,37 @@ void Unit::setCapacity() {
 	this->capacity = total;
 }
 
-//Projekt  uniwersalnej funkcji ustawiania parametru na podstawie rodzaju parametru (z enum w Unit.cpp)
-//(nie jest modularna :( ) 
-//
-//void Unit::setParameter(type parameter) {
-//	double (*getParameter)() const;
-//	double total = 0;
-//	double number = 0;
-//	double lineCoef, matrixCoef, cubeCoef, spearCoef;
-//	unsigned int i = 0;
-//	unsigned int size = this->unit.size();
-//	
-//	switch(parameter) {
-//		case velocity:
-//			getParameter = &(this->unit[i]->getVelocity);
-//			break;
-//		case scope:
-//			getParameter = &(this->unit[i]->getScope);
-//			break;
-//		case durability:
-//			getParameter = &(this->unit[i]->getDurability);
-//			break;
-//		case combatValue:
-//			getParameter = &(this->unit[i]->getCombatValue);
-//			break;
-//		case capactiy:
-//			getParameter = &(this->unit[i]->getCapacity);
-//			break;
-//	}
-//	
-//	if(size) {
-//		if(size == 1) {
-//			total = getParameter();
-//		}
-//		else {
-//			for( i = 0; i < size; i++ ) {
-//				switch(parameter) {
-//					case velocity:
-//						lineCoef = 3;
-//						matrixCoef = 1;
-//						cubeCoef = 0.75;
-//						spearCoef = 2;
-//						break;
-//					case scope:
-//						lineCoef = 0.75;
-//						matrixCoef = 3;
-//						cubeCoef = 2;
-//						spearCoef = 1;
-//						break;
-//					case durability:
-//						lineCoef = 0.75;
-//						matrixCoef = 2;
-//						cubeCoef = 3;
-//						spearCoef = 1.5;
-//						break;
-//					case combatValue:
-//						lineCoef = 2;
-//						matrixCoef = 1;
-//						cubeCoef = 0.75;
-//						spearCoef = 3;
-//						break;
-//					case capactiy:
-//						lineCoef = 1;
-//						matrixCoef = 1;
-//						cubeCoef = 1;
-//						spearCoef = 1;
-//						break;
-//					default:
-//						break;
-//				}
-//			}
-//	}
-//	
-//}
+Unit& Unit::operator= (const Unit& other) {
+	
+	if(this != &other) {
+		name = other.name;
+		
+		numOfShips = other.numOfShips;
+		numOfCargo = other.numOfCargo;
+		numOfCombat = other.numOfCombat;
+		
+		velocity = other.velocity;
+		scope = other.scope;
+		durability = other.durability;
+		combatValue = other.combatValue;
+		capacity = other.capacity;
+		
+		for(unsigned int i = 0; i < other.unit.size(); i++) {
+		cout << this->unit[i]->getName() << " destroyed" << endl;
+		delete this->unit[i];
+		Ship& ref = *other.unit[i];
+		Ship* ptr = new Ship(ref);
+		this->unit.push_back(ptr);
+		}
+	}
+	return *this;
+}
+
+Ship* Unit::getShip(unsigned int chosen) {
+	unsigned int size = this->unit.size();
+	unsigned int i;
+	if((chosen-1) < size) {
+		return this->unit[chosen-1];
+	}
+	else return NULL;
+}
