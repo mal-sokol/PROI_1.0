@@ -139,7 +139,7 @@ int main() {
 	myFleet.extendMenu(choice);
 	
 //	myFleet.choose(choice, l);
-	
+	//myFleet.~Fleet();
 	
 
 	return 0;

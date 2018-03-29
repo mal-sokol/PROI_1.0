@@ -3,7 +3,7 @@
 unsigned int Combat::numberOfCombat = 0;
 
 Combat::Combat() : Ship() {
-	cout<< "Dziala domyslny konstruktor Combat"<< endl;
+//	cout<< "Dziala domyslny konstruktor Combat"<< endl;
 	Combat::numberOfCombat++;
 	
 	this->combatValue = 100;
@@ -11,7 +11,7 @@ Combat::Combat() : Ship() {
 }
 
 Combat::Combat(string name) : Ship(name) {
-	cout<< "Dziala domyslny konstruktor Combat"<< endl;
+//	cout<< "Dziala domyslny konstruktor Combat"<< endl;
 	srand( time( NULL ));
 	this->combatValue = (rand()+500)%1500;
 	this->weapon = NULL;
@@ -27,7 +27,7 @@ Combat::Combat(const Combat& toCopyFrom) : Ship(toCopyFrom) {
 Combat::~Combat()
 {
 	this->loseWeapon();
-	cout << "~Combat(): uruchomiono" << std::endl;
+//	cout << "~Combat(): uruchomiono" << std::endl;
 
 }
 
@@ -37,6 +37,8 @@ void Combat::getWeapon(Weapon* ptr) {
 
 void Combat::loseWeapon() {
 	if(this->weapon) {
+		// Funkcja powinna zwracac bron do arsenalu
+		delete this->weapon;
 		this->weapon = NULL;
 	}
 }

@@ -19,12 +19,12 @@ Unit::Unit(string name) {
 }
 
 Unit::~Unit() {
-	cout << "Unit destructor at work" << endl;
+//	cout << "Unit destructor at work" << endl;
 	unsigned int size = this->unit.size();
 	if(size) {
 		for( unsigned int i = 0; i < size; i++ ) {
-			cout << this->unit[i]->getName() << " destroyed" << endl;
-//			delete this->unit[i];
+			cout << this->unit[i]->getName() << " Unit destroyed" << endl;
+			delete this->unit[i];
 		}
 		this->unit.clear();
 	}
