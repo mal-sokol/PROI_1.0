@@ -28,11 +28,11 @@ public:
 	double getDurability() const {return durability;}
 	
 	virtual double getCombatValue() const {
-		cout << "Dziala Ship::getCombatValue" << endl;
+//		cout << "Dziala Ship::getCombatValue" << endl;
 		return 0;
 	}
 	virtual double getCapacity() const {
-		cout << "Dziala Ship::getCapacity" << endl;
+//		cout << "Dziala Ship::getCapacity" << endl;
 		return 0;
 	} 
 	

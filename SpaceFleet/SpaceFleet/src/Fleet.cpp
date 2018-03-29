@@ -172,7 +172,7 @@ void Fleet::extendMenu(int i) {
 
 void Fleet::choose(int i, char b) {
 	
-	unsigned int unit, ship;
+	unsigned int unit;
 	Unit* temp;
 	
 	unsigned int size = this->fleet.size();
