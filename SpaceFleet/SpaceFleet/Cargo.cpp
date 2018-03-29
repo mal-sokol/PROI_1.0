@@ -2,7 +2,7 @@
 
 unsigned int Cargo::numberOfCargo = 0;
 
-Cargo::Cargo() : Ship("StdCargo", 30, 1200, 50) {
+Cargo::Cargo() : Ship() {
 	cout<< "Dziala domyslny konstruktor Cargo"<< endl;
 	Ship::numberOfShips++;
 	Cargo::numberOfCargo++;
@@ -10,9 +10,11 @@ Cargo::Cargo() : Ship("StdCargo", 30, 1200, 50) {
 	this->capacity = 1000;
 }
 
-Cargo::Cargo(string name, double velocity, double scope, double durability, double capacity) : Ship(name, velocity, scope, durability) {
+Cargo::Cargo(string name) : Ship(name) {
 	cout<< "Dziala konstruktor Cargo"<< endl;
-	this->capacity = capacity;
+	srand( time( NULL ));
+	this->capacity = (rand()+800)%1500;
+	
 	
 	Cargo::numberOfCargo++;
 }

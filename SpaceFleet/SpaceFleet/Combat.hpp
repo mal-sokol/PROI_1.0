@@ -3,9 +3,11 @@
 
 #include <iostream>
 #include <string>
+#include <ctime>
 #include "Ship.hpp"
 #include "Weapon.hpp"
 #include "Arsenal.hpp"
+
 
 using namespace std;
 
@@ -14,7 +16,7 @@ class Combat : public Ship
 public:
 	Combat();
 	Combat(const Combat& toCopyFrom);
-	Combat(string name, double velocity = 70, double scope = 750, double durability = 70, double combatValue = 100);
+	Combat(string name);
 	~Combat();
 	Combat& operator= (const Combat& other);
 	

@@ -17,11 +17,20 @@ using namespace std;
 class Menu
 {
 public:
-	Menu();
+	Menu(const int MARGIN, const int WIDTH, const int COLUMN);
 	~Menu();
 	
-	void display();
+	void hello();
+	void howManyUnits();
+	void whichShipType();
+	void header(unsigned int i, string name);
+	void instructions();
 
+private:
+	
+	const int margin;
+	const int width;
+	const int column;
 };
 
 #endif // MENU_HPP

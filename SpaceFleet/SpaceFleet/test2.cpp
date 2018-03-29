@@ -15,14 +15,9 @@ int test2()
 	Ship X;
 	Cargo Y;
 	Cargo Z;
-	Ship NOT("NOT", 10);
+	Ship NOT("NOT");
 	Combat R;
-	Ship Horror("Horror", 100000);
-	
-	cout << "Test tworzy " << Ship::getNumberOfShips() <<" "<< shipFlex(Ship::getNumberOfShips()) << endl
-		<< "W tym " << Cargo::getNumberOfCargo() <<" "<< shipFlex(Cargo::getNumberOfCargo())
-		<< " typu transportowego, " << Combat::getNumberOfCombat() <<" "<< shipFlex(Combat::getNumberOfCombat())
-		<< " typu bojowego." << endl << endl;
+	Ship Horror("Horror");
 		
 		
 	X.display();

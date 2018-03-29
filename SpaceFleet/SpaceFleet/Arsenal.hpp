@@ -14,11 +14,12 @@ class Arsenal
 {
 public:
 	Arsenal();
-	Arsenal(const Arsenal & toCopyFrom);
+	Arsenal(const Arsenal& toCopyFrom);
 	~Arsenal();
 	
 	void display();
 	void add(Weapon* weapon);
+	void remove(unsigned int i);
 	Weapon* getWeapon(unsigned int i);
 	
 private:

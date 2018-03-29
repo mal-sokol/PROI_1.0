@@ -4,6 +4,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <ctime>
 #include "Ship.hpp"
 
 using namespace std;
@@ -12,7 +13,7 @@ class Cargo : public Ship
 {
 public:
 	Cargo();
-	Cargo(string name, double velocity = 30, double scope = 1200, double durability = 50, double capacity = 1000);
+	Cargo(string name);
 	~Cargo();
 	Cargo& operator= (const Cargo& other);
 	
