@@ -2,7 +2,7 @@
 
 unsigned int Combat::numberOfCombat = 0;
 
-Combat::Combat() : Ship("StdCombat", 70, 750, 70) {
+Combat::Combat() : Ship() {
 	cout<< "Dziala domyslny konstruktor Combat"<< endl;
 	Combat::numberOfCombat++;
 	
@@ -10,9 +10,10 @@ Combat::Combat() : Ship("StdCombat", 70, 750, 70) {
 	this->weapon = NULL;
 }
 
-Combat::Combat(string name, double velocity, double scope, double durability, double combatValue) : Ship(name, velocity, scope, durability) {
+Combat::Combat(string name) : Ship(name) {
 	cout<< "Dziala domyslny konstruktor Combat"<< endl;
-	this->combatValue = combatValue;
+	srand( time( NULL ));
+	this->combatValue = (rand()+500)%1500;
 	this->weapon = NULL;
 	
 	Combat::numberOfCombat++;

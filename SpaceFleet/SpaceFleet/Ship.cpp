@@ -22,13 +22,14 @@ Ship::Ship(const Ship& toCopyFrom) {
 	formation = toCopyFrom.formation;
 }
 
-Ship::Ship(string name, double velocity, double scope, double durability) {
+Ship::Ship(string name) {
 	
 	cout<< "Dziala konstruktor Ship"<< endl;
+	srand( time( NULL ));
 	this->name = name;
-	this->velocity = velocity;
-	this->scope = scope;
-	this->durability = durability;
+	this->velocity = (rand()+50)%150;
+	this->scope = (rand()+800)%1500;
+	this->durability = (rand()+20)%100;
 	this->formation = none;
 	
 	Ship::numberOfShips++;
@@ -45,10 +46,11 @@ void Ship::display() {
 	const int width = 12;
 	
 	cout.precision(2);
-	cout<< setw(width) << left << this->name << right
+	cout<< dec
+		<< setw(width) << left << this->name
 		<< setw(width-3) << this->velocity << " %c"
 		<< setw(width-3) << this->scope << " ly"
-		<< setw(width-3) << this->durability << " un"
+		<< setw(width-3) << this->durability << " % "
 		<< setw(width) << this->formationToString();
 }
 

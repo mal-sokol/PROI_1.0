@@ -24,7 +24,7 @@ Unit::~Unit() {
 	if(size) {
 		for( unsigned int i = 0; i < size; i++ ) {
 			cout << this->unit[i]->getName() << " destroyed" << endl;
-			delete this->unit[i];
+//			delete this->unit[i];
 		}
 		this->unit.clear();
 	}
@@ -43,27 +43,31 @@ void Unit::add(Ship* member) {
 void Unit::display() {
 	
 	const int width = 12;
-	
+	int margin = 5;
 	cout.precision(2);
-	cout<< setw(width) << left << this->name << right
-		<< setw(width-3) << this->velocity << " %c"
-		<< setw(width-3) << this->scope << " ly"
-		<< setw(width-3) << this->durability << " un"
-		<< setw(width) << this->getCombatValue()
-		<< setw(width) << this->getCapacity() << endl;
+	cout << fixed;
+	cout<< endl
+		<< "Parametry jednostki " << setw(width) << left << this->name << right << endl
+		<< setfill('-') << setw(5*width + 7) << '-' << setfill(' ') << endl
+		<< setw(margin) << ' ' << "PREDKOSC: " << this->velocity << " %c" << endl
+		<< setw(margin) << ' ' << "ZASIEG: " << this->scope << " ly" << endl
+		<< setw(margin) << ' ' << "WYTRZYMALOSC: " << this->durability << " %" << endl
+		<< setw(margin) << ' ' << "WARTOSC BOJOWA: " << this->getCombatValue() << endl
+		<< setw(margin) << ' ' << "LADUNEK: " << this->getCapacity() << " Mt" << endl << endl;
 }
 
 void Unit::displayMembers() {
 	const int width = 12;
-	
+	cout.precision(2);
+	cout << fixed;
 	unsigned int size = this->unit.size();
 	if(size) {
 		cout<< "     "
-			<< setw(width) << left << "NAME" << right
-			<< setw(width) << "VELOCITY"
-			<< setw(width) << "SCOPE"
-			<< setw(width) << "DURABILITY"
-			<< setw(width) << "FORMATION" << endl
+			<< setw(width) << left << "NAME"
+			<< setw(width) << "PREDKOSC"
+			<< setw(width) << "ZASIEG"
+			<< setw(width) << "WYTRZYMALOSC"
+			<< setw(width) << "FORMACJA" << endl
 			<< setfill('-') << setw(5*width + 7) << '-' << setfill(' ') << endl;
 		for( unsigned int i = 0; i < size; i++ ) {
 			cout << setw(3) << i+1 << ". ";
@@ -111,6 +115,7 @@ void Unit::setVelocity() {
 }
 
 void Unit::setScope() {
+	
 	double total = 0;
 	int inMatrix = 0;
 	double sumScInMatrix = 0;
@@ -144,6 +149,7 @@ void Unit::setScope() {
 	
 	this->scope = total;
 }
+
 void Unit::setDurability() {
 	double total = 0;
 	double number = 0;
@@ -277,8 +283,8 @@ Unit& Unit::operator= (const Unit& other) {
 }
 
 Ship* Unit::getShip(unsigned int chosen) {
+	
 	unsigned int size = this->unit.size();
-	unsigned int i;
 	if((chosen-1) < size) {
 		return this->unit[chosen-1];
 	}

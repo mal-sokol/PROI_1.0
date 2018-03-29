@@ -12,8 +12,8 @@ string shipFlex(int num);
 
 int test3() {
 	
-	Weapon Mistle("Mistle", -10, -10, -10, 3000);
-	Weapon AtomicBomb("Atomic bomb", -80, -50, -40, 7500);
+	Weapon Mistle("Mistle");
+	Weapon AtomicBomb("Atomic bomb");
 	
 	Mistle.display();
 	AtomicBomb.display();

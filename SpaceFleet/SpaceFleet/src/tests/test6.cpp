@@ -17,18 +17,13 @@ int test6() {
 	
 // [ship type](name, velocity, scope, durability, combatValue/capacity/-)
 	
-	Ship* ptr1 = new Ship("XR027", 300, 120, 1000);
-	Cargo* ptrCargo1 = new Cargo("CHROM", 200, 30, 7500, 1200);
-	Cargo* ptrCargo2 = new Cargo("MIX", 450, 80, 1000, 1000);
-	Cargo* ptrCargo3 = new Cargo("COS012", 80, 80, 500, 4500);
-	Combat* ptrCombat1 = new Combat("TAS001", 450, 70, 700, 200);
-	Combat* ptrCombat2 = new Combat("Attic001", 170, 300, 20, 600);
-	Combat* ptrCombat3 = new Combat("Attic002", 190, 250, 60, 600);
-	
-	cout << "Test tworzy " << Ship::getNumberOfShips() <<" "<< shipFlex(Ship::getNumberOfShips()) << endl
-		<< "W tym " << Cargo::getNumberOfCargo() <<" "<< shipFlex(Cargo::getNumberOfCargo())
-		<< " typu transportowego, " << Combat::getNumberOfCombat() <<" "<< shipFlex(Combat::getNumberOfCombat())
-		<< " typu bojowego." << endl << endl;
+	Ship* ptr1 = new Ship("XR027");
+	Cargo* ptrCargo1 = new Cargo("CHROM");
+	Cargo* ptrCargo2 = new Cargo("MIX");
+	Cargo* ptrCargo3 = new Cargo("COS012");
+	Combat* ptrCombat1 = new Combat("TAS001");
+	Combat* ptrCombat2 = new Combat("Attic001");
+	Combat* ptrCombat3 = new Combat("Attic002");
 	
 	Unit myUnit("UnitTest001");
 	

@@ -104,7 +104,6 @@
     <File Name="Weapon.hpp"/>
     <File Name="Combat.hpp"/>
     <File Name="Combat.cpp"/>
-    <File Name="fun.cpp"/>
     <VirtualDirectory Name="tests">
       <File Name="src/tests/test7.cpp"/>
       <File Name="src/tests/test6.cpp"/>

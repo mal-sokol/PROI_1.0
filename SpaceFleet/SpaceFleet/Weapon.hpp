@@ -14,8 +14,8 @@ class Weapon
 public:
 	Weapon();
 	Weapon(const Weapon& toCopyFrom);
-	Weapon(double help);
-	Weapon(string name, double velocityInfluence, double scopeInfluence, double durabilityInfluence, double combatValue);
+	Weapon(string name, int vInf, int scInf, int dInf, int cValue);
+	Weapon(string name);
 	~Weapon();
 
 	string getName() {return name;}

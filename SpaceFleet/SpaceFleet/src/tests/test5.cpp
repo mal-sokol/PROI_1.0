@@ -12,9 +12,9 @@ using namespace std;
 int test5() {
 	
 	Weapon* weaponPtr;
-	weaponPtr = new Weapon("Bomb", -110, -200, -100, 3000);
+	weaponPtr = new Weapon("Bomb");
 	
-	Combat myShip("Alex", 500, 400, 500, 10);
+	Combat myShip("Alex");
 	
 	myShip.display();
 	cout << endl << endl;

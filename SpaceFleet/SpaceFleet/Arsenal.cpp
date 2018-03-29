@@ -1,9 +1,10 @@
 #include "Arsenal.hpp"
 
 Arsenal::Arsenal() {
+	
 	Weapon* newWeapon = NULL;
 	fstream myFile;
-	myFile.open("arsenal.txt", std::ios::in | std::ios::out);
+	myFile.open("arsenal.txt", ios::in);
 	
 	double vInf, scInf, dInf, cValue;
 	string name;
@@ -54,24 +55,23 @@ Arsenal::~Arsenal() {
 
 }
 
-
-void Arsenal::display() 
-{
+void Arsenal::display() {
 	int width = 12;
 	unsigned int size = this->arsenal.size();
 	if(size) {
-			cout<< setw(5*width + 5) << right << "COMBAT" << endl <<  "     "
-				<< setw(width) << left << "NAME" << right
-				<< setw(width) << "VELOCITY"
-				<< setw(width) << "SCOPE"
-				<< setw(width) << "DURABILITY"
-				<< setw(width) << "VALUE" << endl
+			cout<< setw(5*width + 5) << right << "WARTOSC" << endl <<  "     "
+				<< setw(width) << left << "NAZWA" << right
+				<< setw(width) << "PREDKOSC"
+				<< setw(width) << "ZASIEG"
+				<< setw(width) << "WYTRZYMALOSC"
+				<< setw(width) << "BOJOWA" << endl
 				<< setfill('-') << setw(5*width + 5) << '-' << setfill(' ') << endl;
 				
 		for( unsigned int i = 0; i < size; i++ ) {
 			cout << setw(3) << i+1 << ". ";
 			this->arsenal[i]->display();
 		}
+		cout << endl;
 	}
 	else {
 		cout << "Your arsenal is empty" << endl;
@@ -81,6 +81,14 @@ void Arsenal::display()
 void Arsenal::add(Weapon* weapon) {
 	this->arsenal.push_back(weapon);
 }
+
+//void Arsenal::remove(unsigned int i) {
+//	
+//	unsigned int size = arsenal.size();
+//	if(i<size) {
+//		
+//	}
+//}
 
 Weapon* Arsenal::getWeapon(unsigned int chosen) {
 	unsigned int size = arsenal.size();

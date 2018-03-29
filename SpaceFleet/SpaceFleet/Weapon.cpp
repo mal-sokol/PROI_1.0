@@ -1,25 +1,24 @@
 #include "Weapon.hpp"
 
-Weapon::Weapon() {}
+Weapon::Weapon() {
+}
 
-Weapon::Weapon(double help) {
-	cout<< "Dziala domyslny konstruktor Weapon" <<endl;
-	srand( time( NULL ) * help );
-	this->name = "Random";
-	this->velocityInfluence = -rand()%100;
-	this->scopeInfluence = -rand()%100;
-	this->durabilityInfluence = rand()%100 - 50;
+Weapon::Weapon(string name) {
+	cout<< "Dziala konstruktor Weapon" <<endl;
+	srand( time( NULL ));
+	this->name = name;
+	this->velocityInfluence = -rand()%40;
+	this->scopeInfluence = -rand()%300;
+	this->durabilityInfluence = rand()%40 - 20;
 	this->combatValue = 100 + rand()%900;
 }
 
-Weapon::Weapon(string name, double velocityInfluence, double scopeInfluence, double durabilityInfluence, double combatValue)
-{
-	cout<< "Dziala konstruktor Weapon" <<endl;
+Weapon::Weapon(string name, int vInf, int scInf, int dInf, int cValue) {
 	this->name = name;
-	this->velocityInfluence = velocityInfluence;
-	this->scopeInfluence = scopeInfluence;
-	this->durabilityInfluence = durabilityInfluence;
-	this->combatValue = combatValue;
+	this->velocityInfluence = vInf;
+	this->scopeInfluence = scInf;
+	this->durabilityInfluence = dInf;
+	this->combatValue = cValue;
 }
 
 Weapon::Weapon(const Weapon& toCopyFrom) {

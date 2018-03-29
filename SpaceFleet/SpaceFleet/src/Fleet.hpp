@@ -26,10 +26,22 @@ public:
 	void assignWeapon(Unit* unit, Combat* ship, Weapon* weapon);
 	void removeWeapon(unsigned int unit, unsigned int ship);
 	
-	Arsenal& getArsenal() {return myArsenal;}
+	Arsenal* getArsenal() {return &myArsenal;}
 	Unit* getUnit(unsigned int chosen);
-	Unit* getUnit(string name);
+//	Unit* getUnit(string name);
 	Weapon* getWeapon(unsigned int chosen);
+	vector<Unit*> getFleet() {return fleet;}
+	void findBest(char criteria);
+	
+	bool cmpVelocity (Unit* i,Unit* j) { return (i->getVelocity() < j->getVelocity()); }
+	bool cmpScope (Unit* i,Unit* j) { return (i->getScope() < j->getScope()); }
+	bool cmpDurability (Unit* i,Unit* j) { return (i->getDurability() < j->getDurability()); }
+	bool cmpCombatValue (Unit* i,Unit* j) { return (i->getCombatValue() < j->getCombatValue()); }
+	bool cmpCapacity (Unit* i,Unit* j) { return (i->getCapacity() < j->getCapacity()); }
+	
+	void menu();
+	void extendMenu(int i);
+	void choose(int i, char b);
 	
 private:
 	Arsenal myArsenal;

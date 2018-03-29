@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -16,7 +18,7 @@ class Ship
 public:
 	Ship();
 	Ship(const Ship& toCopyFrom);
-	Ship(string name, double velocity = 50, double scope = 1000, double durability = 50);
+	Ship(string name);
 	virtual ~Ship();
 	Ship& operator= (const Ship& other);
 	
