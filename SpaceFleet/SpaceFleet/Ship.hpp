@@ -29,17 +29,23 @@ public:
 	
 	virtual double getCombatValue() const {
 <<<<<<< HEAD
+<<<<<<< HEAD
 //		cout << "Dziala Ship::getCombatValue" << endl;
 		return 0;
 	}
 	virtual double getCapacity() const {
 //		cout << "Dziala Ship::getCapacity" << endl;
 =======
+=======
+>>>>>>> 56f329d215eb3524fa7508b847ad91c5d37e078a
 		cout << "Dziala Ship::getCombatValue" << endl;
 		return 0;
 	}
 	virtual double getCapacity() const {
 		cout << "Dziala Ship::getCapacity" << endl;
+<<<<<<< HEAD
+>>>>>>> 56f329d215eb3524fa7508b847ad91c5d37e078a
+=======
 >>>>>>> 56f329d215eb3524fa7508b847ad91c5d37e078a
 		return 0;
 	} 
