@@ -4,7 +4,7 @@ unsigned int Ship::numberOfShips = 0;
 
 Ship::Ship() {
 	
-	cout<< "Dziala domyslny konstruktor Ship"<< endl;
+//	cout<< "Dziala konstruktor Ship"<< endl;
 	this->name = "Standard";
 	this->velocity = 50;
 	this->scope = 1000;
@@ -24,7 +24,7 @@ Ship::Ship(const Ship& toCopyFrom) {
 
 Ship::Ship(string name) {
 	
-	cout<< "Dziala konstruktor Ship"<< endl;
+//	cout<< "Dziala konstruktor Ship"<< endl;
 	srand( time( NULL ));
 	this->name = name;
 	this->velocity = (rand()+50)%150;
@@ -37,7 +37,7 @@ Ship::Ship(string name) {
 
 Ship::~Ship()
 {
-	cout << "~Ship(): uruchomiono" << std::endl;
+//	cout << "~Ship(): uruchomiono" << std::endl;
 }
 
 

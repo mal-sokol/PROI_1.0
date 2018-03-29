@@ -9,12 +9,13 @@ Fleet::Fleet(Arsenal& toCpy) {
 }
 
 Fleet::~Fleet() {
-	cout << "Fleet destructor at work" << endl;
+//	cout << "Fleet destructor at work" << endl;
 	unsigned int size = this->fleet.size();
 	if(size) {
 		for( unsigned int i = 0; i < size; i++ ) {
-			cout << this->fleet[i]->getName() << " destroyed" << endl;
-//			delete this->fleet[i];
+			cout << this->fleet[i]->getName() << "Fleet destroyed" << endl;
+//			this->fleet[i]->~Unit();
+			delete this->fleet[i];
 		}
 		this->fleet.clear();
 	}
