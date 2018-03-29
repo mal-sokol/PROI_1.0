@@ -23,7 +23,7 @@ int main() {
 	cout << fixed;
 	cout.precision(2);
 	
-	char a, l, shipType;
+	char a, shipType;
 	int numU, numS, choice;
 	string nameU, nameS;
 	Ship* shipPtr;
