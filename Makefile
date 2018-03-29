@@ -31,4 +31,4 @@ Weapon.o : Weapon.cpp Weapon.hpp
 	$(CC) -g -c Weapon.cpp -o Weapon.o
 	
 clear :
-	rm *.o
+	rm *.o main.out
