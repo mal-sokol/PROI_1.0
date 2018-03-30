@@ -1,8 +1,7 @@
-// Wersja probna arsenalu
+//Test dodaje wskaznik na Weapon do obiektu Combat
 
 #include <iostream>
 #include <string>
-#include <vector>
 #include "Ship.hpp"
 #include "Cargo.hpp"
 #include "Combat.hpp"
@@ -12,17 +11,19 @@ using namespace std;
 
 int test4() {
 	
-	Arsenal myArsenal;
+	Weapon* weaponPtr;
+	weaponPtr = new Weapon("Bomb");
 	
-//	Weapon newWeapon(17);
-//	Weapon Balistic("Balistic", 68, -100, -60, 130);
-//	
-//	Weapon nextWeapon(0.1);
-//	
-//	myArsenal.add(&newWeapon);
-//	myArsenal.add(&nextWeapon);
-//	myArsenal.add(&Balistic);
-//	
-	myArsenal.display();
+	Combat myShip("Alex");
+	
+	myShip.display();
+	cout << endl << endl;
+	myShip.getWeapon(weaponPtr);
+	myShip.display();
+	
+	getchar();
+	
+	delete weaponPtr;
+	
 	return 0;
 }

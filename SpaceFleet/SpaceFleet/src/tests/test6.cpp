@@ -12,7 +12,7 @@ using namespace std;
 
 string shipFlex(int num);
 
-int test6() {
+int test5() {
 	int d = 0;
 	
 // [ship type](name, velocity, scope, durability, combatValue/capacity/-)

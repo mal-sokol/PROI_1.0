@@ -105,12 +105,13 @@
     <File Name="Combat.hpp"/>
     <File Name="Combat.cpp"/>
     <VirtualDirectory Name="tests">
-      <File Name="src/tests/test7.cpp"/>
-      <File Name="src/tests/test6.cpp"/>
       <File Name="src/tests/test5.cpp"/>
       <File Name="src/tests/test4.cpp"/>
       <File Name="src/tests/test3.cpp"/>
-      <File Name="test2.cpp"/>
+      <File Name="src/tests/test2.cpp"/>
+      <File Name="src/tests/Test.cpp"/>
+      <File Name="src/tests/Test.hpp"/>
+      <File Name="src/tests/test7.cpp"/>
       <File Name="test1.cpp"/>
     </VirtualDirectory>
     <File Name="Cargo.cpp"/>

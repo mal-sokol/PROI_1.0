@@ -1,22 +1,28 @@
-//Test tworzy obiekty typu Weapon
+// Wersja probna arsenalu
 
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Ship.hpp"
 #include "Cargo.hpp"
 #include "Combat.hpp"
+#include "Arsenal.hpp"
 
 using namespace std;
 
-string shipFlex(int num);
-
-int test3() {
+int test4() {
 	
-	Weapon Mistle("Mistle");
-	Weapon AtomicBomb("Atomic bomb");
+	Arsenal myArsenal;
 	
-	Mistle.display();
-	AtomicBomb.display();
-	
+//	Weapon newWeapon(17);
+//	Weapon Balistic("Balistic", 68, -100, -60, 130);
+//	
+//	Weapon nextWeapon(0.1);
+//	
+//	myArsenal.add(&newWeapon);
+//	myArsenal.add(&nextWeapon);
+//	myArsenal.add(&Balistic);
+//	
+	myArsenal.display();
 	return 0;
 }
