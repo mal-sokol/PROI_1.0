@@ -53,7 +53,7 @@ void Menu::header(unsigned int i, string name) {
 
 void Menu::instructions() {
 	
-//	//	system("clear");
+//	system("clear");
 //	system("cls");
 	
 	cout << endl

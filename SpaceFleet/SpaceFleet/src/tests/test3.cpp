@@ -14,13 +14,13 @@ int test3() {
 	
 	Arsenal myArsenal;
 	
-	Weapon newWeapon();
-	Weapon Balistic("Balistic");
-	Weapon nextWeapon();
+	Weapon* ptr1 = new Weapon("X");
+	Weapon* ptr2 = new Weapon("Y");
+	Weapon* ptr3 = new Weapon();
 	
-	myArsenal.add(&newWeapon);
-	myArsenal.add(&nextWeapon);
-	myArsenal.add(&Balistic);
+	myArsenal.add(ptr1);
+	myArsenal.add(ptr2);
+	myArsenal.add(ptr3);
 	
 	myArsenal.display();
 	return 0;

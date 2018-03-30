@@ -93,6 +93,8 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="src/FileManager.cpp"/>
+    <File Name="src/FileManager.hpp"/>
     <File Name="Menu.cpp"/>
     <File Name="Menu.hpp"/>
     <File Name="src/Fleet.cpp"/>
