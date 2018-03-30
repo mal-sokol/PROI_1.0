@@ -1,4 +1,5 @@
 //Testowanie Menu
+
 #include <iostream>
 #include <string>
 #include "Ship.hpp"
@@ -12,7 +13,7 @@ using namespace std;
 
 string shipFlex(int num);
 
-int test7() {
+int test6() {
 //	int i;
 //	Menu menu(5, 30, 10);
 //	menu.display();

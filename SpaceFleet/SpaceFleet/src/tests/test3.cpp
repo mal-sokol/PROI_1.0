@@ -1,4 +1,4 @@
-// Wersja probna arsenalu
+// Test tworzy obiekt Arsenal i dodaje do niego obiekty typu Weapon
 
 #include <iostream>
 #include <string>
@@ -10,19 +10,18 @@
 
 using namespace std;
 
-int test4() {
+int test3() {
 	
 	Arsenal myArsenal;
 	
-//	Weapon newWeapon(17);
-//	Weapon Balistic("Balistic", 68, -100, -60, 130);
-//	
-//	Weapon nextWeapon(0.1);
-//	
-//	myArsenal.add(&newWeapon);
-//	myArsenal.add(&nextWeapon);
-//	myArsenal.add(&Balistic);
-//	
+	Weapon newWeapon();
+	Weapon Balistic("Balistic");
+	Weapon nextWeapon();
+	
+	myArsenal.add(&newWeapon);
+	myArsenal.add(&nextWeapon);
+	myArsenal.add(&Balistic);
+	
 	myArsenal.display();
 	return 0;
 }

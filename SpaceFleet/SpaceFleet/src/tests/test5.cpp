@@ -1,4 +1,5 @@
-//Testowanie funkcji klasy Unit
+//Tworzy unit i dodaje do niego wskazania na statki, wylicza parametry unitu i je wyswietla
+//Zwraca ilosc parametrow niezgodnych z oczekiwaniami
 
 #include <iostream>
 #include <string>
@@ -15,7 +16,6 @@ string shipFlex(int num);
 int test5() {
 	int d = 0;
 	
-// [ship type](name, velocity, scope, durability, combatValue/capacity/-)
 	
 	Ship* ptr1 = new Ship("XR027");
 	Cargo* ptrCargo1 = new Cargo("CHROM");

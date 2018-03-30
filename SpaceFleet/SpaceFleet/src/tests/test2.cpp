@@ -10,7 +10,7 @@ using namespace std;
 
 string shipFlex(int num);
 
-int test3() {
+int test2() {
 	
 	Weapon Mistle("Mistle");
 	Weapon AtomicBomb("Atomic bomb");
