@@ -1,3 +1,6 @@
+#ifndef VIEW_HPP
+#define VIEW_HPP
+
 #include <iostream>
 #include <string>
 
@@ -10,7 +13,13 @@
 
 using namespace std;
 
-int main() {
+class View
+{
+public:
+	View();
+	~View();
+	
+	int oldMain(); // zawartosc maina do rozdysponowania w oddzielne funkcje
+};
 
-	return 0;
-}
+#endif // VIEW_HPP

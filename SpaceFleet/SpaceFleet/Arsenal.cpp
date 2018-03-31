@@ -1,24 +1,6 @@
 #include "Arsenal.hpp"
 
 Arsenal::Arsenal() {
-	
-	Weapon* newWeapon = NULL;
-	fstream myFile;
-	myFile.open("arsenal.txt", ios::in);
-	
-	double vInf, scInf, dInf, cValue;
-	string name;
-	
-	if(myFile.good()) {
-		while(myFile >> name >> vInf >> scInf >> dInf >> cValue) {
-			newWeapon = new Weapon(name, vInf, scInf, dInf, cValue);
-			arsenal.push_back(newWeapon);
-		}
-		myFile.close();
-	}
-	else {
-		cout << "Your arsenal is epmty" << endl;
-	}
 }
 
 Arsenal::Arsenal(const Arsenal& toCopyFrom) {
