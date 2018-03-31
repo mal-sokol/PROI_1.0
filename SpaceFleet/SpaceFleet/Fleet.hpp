@@ -39,10 +39,6 @@ public:
 	bool cmpCombatValue (Unit* i,Unit* j) { return (i->getCombatValue() < j->getCombatValue()); }
 	bool cmpCapacity (Unit* i,Unit* j) { return (i->getCapacity() < j->getCapacity()); }
 	
-	void menu();
-	void extendMenu(int i);
-	void choose(int i, char b);
-	
 private:
 	Arsenal myArsenal;
 	vector <Unit*> fleet;

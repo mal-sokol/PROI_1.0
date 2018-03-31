@@ -11,6 +11,7 @@
 #include "Cargo.hpp"
 #include "Arsenal.hpp"
 #include "Unit.hpp"
+#include "Fleet.hpp"
 
 using namespace std;
 
@@ -25,10 +26,11 @@ public:
 	void whichShipType();
 	void inProgress(unsigned int i, string name);
 	void main();
+	void extendMain(int option);
 	void instructions();
+//	void choose(Fleet& myFleet, int option);
 
 private:
-	
 	const int margin;
 	const int width;
 	const int column;

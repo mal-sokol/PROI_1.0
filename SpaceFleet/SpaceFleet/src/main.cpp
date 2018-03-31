@@ -7,10 +7,16 @@
 #include "Weapon.hpp"
 #include "Fleet.hpp"
 #include "Menu.hpp"
+#include "View.hpp"
 
 using namespace std;
 
 int main() {
-
+	
+	View* view = new View();
+	if(view->start()) {
+	view->createFleet();
+	}
+	delete view;
 	return 0;
 }

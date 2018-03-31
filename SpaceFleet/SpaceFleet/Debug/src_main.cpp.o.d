@@ -1,6 +1,6 @@
 Debug/src_main.cpp.o: src/main.cpp Ship.hpp Cargo.hpp Ship.hpp Combat.hpp \
- Weapon.hpp Arsenal.hpp Weapon.hpp src/Fleet.hpp Arsenal.hpp Unit.hpp \
- Menu.hpp Combat.hpp Cargo.hpp Unit.hpp
+ Weapon.hpp Arsenal.hpp Weapon.hpp Fleet.hpp Combat.hpp Cargo.hpp \
+ Unit.hpp Menu.hpp Fleet.hpp src/View.hpp
 
 Ship.hpp:
 
@@ -16,16 +16,16 @@ Arsenal.hpp:
 
 Weapon.hpp:
 
-src/Fleet.hpp:
+Fleet.hpp:
 
-Arsenal.hpp:
+Combat.hpp:
+
+Cargo.hpp:
 
 Unit.hpp:
 
 Menu.hpp:
 
-Combat.hpp:
+Fleet.hpp:
 
-Cargo.hpp:
-
-Unit.hpp:
+src/View.hpp:

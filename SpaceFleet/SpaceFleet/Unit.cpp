@@ -250,7 +250,7 @@ void Unit::setCapacity() {
 		}
 	}
 	else {
-		cout << "Youre unit has no members" << endl;
+		cout << "Brak statkow w jednostce" << endl;
 	}
 	
 	this->capacity = total;
