@@ -16,6 +16,8 @@ int main() {
 	View* view = new View();
 	if(view->start()) {
 	view->createFleet();
+	view->showInstructions();
+	view->showMain();
 	}
 	delete view;
 	return 0;

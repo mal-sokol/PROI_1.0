@@ -49,6 +49,8 @@ void View::createFleet() {
 		unitPtr = createUnit();
 		fleetPtr->add(unitPtr);
 	}
+	
+	
 	myFleet = fleetPtr;
 }
 
@@ -59,7 +61,7 @@ Unit* View::createUnit() {
 	string nameU;
 	int numS;
 	
-	cout << setw(5) << ' ';
+	cout << endl << setw(5) << ' ';
 	cout << "Wpisz nazwe jednostki: ";
 	cout << setw(5) << ' ';
 	
@@ -130,6 +132,39 @@ Ship* View::createShip() {
 	}
 	return shipPtr;
 }
+
+void View::chooseFromMain(Fleet* myFleet) {
+	
+	int choice;
+	cin >> choice;
+	
+	while(cin.good() && (choice>0 || choice<5)) {
+		switch(choice) {
+			case 1:
+				system("cls");
+//				system("clear");
+				
+				myFleet->display();
+				cin.ignore(1000, '\n');
+				break;
+			case 2:
+				
+				break;
+			case 3:
+				
+				break;
+			case 4:
+				
+				break;
+		}
+	}
+}
+
+void View::showMain() {
+	menu->main();
+	chooseFromMain(myFleet);
+}
+
 
 
 int View::oldMain() { // zawartosc maina do rozdysponowania w oddzielne funkcje

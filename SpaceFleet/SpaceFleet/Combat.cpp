@@ -11,7 +11,7 @@ Combat::Combat() : Ship() {
 }
 
 Combat::Combat(string name) : Ship(name) {
-//	cout<< "Dziala domyslny konstruktor Combat"<< endl;
+//	cout<< "Dziala konstruktor Combat"<< endl;
 	srand( time( NULL ));
 	this->combatValue = (rand()+500)%1500;
 	this->weapon = NULL;

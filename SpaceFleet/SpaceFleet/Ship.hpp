@@ -27,12 +27,12 @@ public:
 	double getScope() const {return scope;}
 	double getDurability() const {return durability;}
 	
-	virtual double getCombatValue() {
+	virtual double getCombatValue() const {
 //		cout << "Dziala Ship::getCombatValue" << endl;
 		return 0;
 	}
 	
-	virtual double getCapacity() {
+	virtual double getCapacity() const {
 //		cout << "Dziala Ship::getCapacity" << endl;
 		return 0;
 	} 

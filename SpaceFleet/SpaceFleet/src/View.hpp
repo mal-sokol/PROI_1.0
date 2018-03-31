@@ -27,6 +27,10 @@ public:
 	Weapon* createWeapon();
 	int oldMain(); // zawartosc maina do rozdysponowania w oddzielne funkcje
 	
+	void showInstructions() {menu->instructions();}
+	void showMain();
+	void chooseFromMain(Fleet* myFleet);
+	
 private:
 	Menu* menu;
 	Fleet* myFleet;

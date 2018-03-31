@@ -55,23 +55,21 @@ void Menu::instructions() {
 	cout << endl
 		<< setw(margin-2) << ' ' << setfill('*') << setw(width-10) << " " << "UDALO SIE STWORZYC FLOTE" << " " << setw(width-10) << "*" << setfill(' ') << endl << endl
 		<< setw(margin+5) << ' ' << "Parametry statkow zostaly przypisane losowo."<< endl
-		<< setw(margin+5) << ' ' << "Mozesz zmodyfikowac je dodajac bron z arsenalu do" << endl
+		<< setw(margin+5) << ' ' << "Mozesz modyfikowac je dodajac bron z arsenalu do" << endl
 		<< setw(margin+5) << ' ' << "statkow bojowych lub dolaczajac statki do formacji." << endl
-		<< setw(margin+5) << ' ' << "Oto twoj arsenal :"<< endl << endl
-		<< setw(margin-2) << ' ' << setfill('*') << setw(2*width + 6) << " " << setfill(' ') << endl << endl
-		<< setw(margin);
+		<< setw(margin+5) << ' ' << "Twoj arsenal jest jeszcze pusty."<< endl << endl;
+//		<< setw(margin-2) << ' ' << setfill('*') << setw(2*width + 6) << " " << setfill(' ') << endl << endl
+//		<< setw(margin);
 }
 
 void Menu::main() {
 	
-//	system("clear");
-	system("cls");
-	
 	cout << endl
 		<< setw(margin-2) << ' ' << setfill('*') << setw(width) << " " << "MENU" << " " << setw(width) << " " << setfill(' ') << endl
 		<< setw(margin) << ' ' << "1) Zobacz swoja flote" << endl
-		<< setw(margin) << ' ' << "2) Pokaz najlepsza jednostke" << endl
-		<< setw(margin) << ' ' << "3) Edytuj jestnostke" << endl
+		<< setw(margin) << ' ' << "2) Dodaj bron do arsenalu" << endl
+		<< setw(margin) << ' ' << "3) Ustaw w formacje" << endl
+		<< setw(margin) << ' ' << "4) Pokaz najlepsza jednostke" << endl
 		<< setw(margin-2) << ' ' << setfill('*') << setw(2*width + 6) << " " << setfill(' ') << endl
 		<< setw(margin) << ' ' << " Podaj numer wybranej pozycji." << endl;
 }

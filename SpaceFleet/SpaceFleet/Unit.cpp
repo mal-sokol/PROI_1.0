@@ -63,7 +63,7 @@ void Unit::displayMembers() {
 	unsigned int size = this->unit.size();
 	if(size) {
 		cout<< "     "
-			<< setw(width) << left << "NAME"
+			<< setw(width) << left << "IMIE"
 			<< setw(width) << "PREDKOSC"
 			<< setw(width) << "ZASIEG"
 			<< setw(width) << "WYTRZYMALOSC"
