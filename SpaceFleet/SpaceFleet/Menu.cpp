@@ -6,7 +6,7 @@ Menu::Menu(const int MARGIN, const int WIDTH, const int COLUMN) : margin(MARGIN)
 Menu::~Menu() {
 }
 
-void Menu::hello() {
+void Menu::start() {
 	
 //	int margin = 5;
 //	int width =30;
@@ -34,7 +34,7 @@ void Menu::whichShipType() {
 		<< setw(margin+5) << ' ';
 }
 
-void Menu::header(unsigned int i, string name) {
+void Menu::inProgress(unsigned int i, string name) {
 	
 //	int margin = 5;
 //	int width =30;
@@ -64,4 +64,98 @@ void Menu::instructions() {
 		<< setw(margin+5) << ' ' << "Oto twoj arsenal :"<< endl << endl
 		<< setw(margin-2) << ' ' << setfill('*') << setw(2*width + 6) << " " << setfill(' ') << endl << endl
 		<< setw(margin);
+}
+
+void Menu::main() {
+	
+//	system("clear");
+	system("cls");
+	
+	cout << endl
+		<< setw(margin-2) << ' ' << setfill('*') << setw(width) << " " << "MENU" << " " << setw(width) << " " << setfill(' ') << endl
+		<< setw(margin) << ' ' << "1) Zobacz swoja flote" << endl
+		<< setw(margin) << ' ' << "2) Pokaz najlepsza jednostke" << endl
+		<< setw(margin) << ' ' << "3) Edytuj jestnostke" << endl
+		<< setw(margin-2) << ' ' << setfill('*') << setw(2*width + 6) << " " << setfill(' ') << endl
+		<< setw(margin) << ' ' << " Podaj numer wybranej pozycji." << endl;
+}
+
+void Fleet::extendMain(int i) {
+	
+	
+	cout << endl;
+		if(i==1) {
+			cout << setw(margin + 4) << ' ' << setw(column) << "A. Wyswietl jednostki"<< endl
+				<< setw(margin + 4) << ' ' << setw(column) << "B. Wyswietl statki" << endl
+				<< setw(margin + 4) << ' ' << setw(column) << "C. Wyswietl arsenal" << endl << endl;
+		}
+		if(i==2) {
+			cout << setw(margin + 4) << ' ' << "Podaj kryterium:" << endl
+				<< setw(margin + 4) << ' ' << "A. Predkosc" << endl
+				<< setw(margin + 4) << ' ' << "B. Zasieg" << endl
+				<< setw(margin + 4) << ' ' << "C. Wytrzymalosc" << endl
+				<< setw(margin + 4) << ' ' << "D. Wartosc bojowa" << endl
+				<< setw(margin + 4) << ' ' << "E. Ladunek" << endl << endl;
+		}
+		if(i==3) {
+			cout << setw(margin + 4) << ' ' << "A. Przydziel bron" << endl
+				<< setw(margin + 4) << ' ' << "B. Przydziel formacje" << endl << endl;
+		}
+	cout << endl << endl;
+}
+
+
+void Menu::choose(Fleet& myFleet, int option) {
+	
+	unsigned int unit;
+
+	Unit* temp;
+	
+	unsigned int size = this->fleet.size();
+	
+		switch(i){
+			case '1':
+				if(tolower(b) == 'a') {
+					for(unsigned int i = 0; i<size; i++) {
+						cout << setw(3) << (i+1) << ". ";
+						this->fleet[i]->display();
+					}
+					cout << endl;
+				}
+				else if(tolower(b) == 'b'){
+					this->display();
+				}
+				else {
+					this->myArsenal.display();
+				}
+				break;
+			case '2':
+				findBest(b);
+				break;
+			case '3':
+				if(tolower(b) == 'a') {
+					for(unsigned int i = 0; i<size; i++) {
+						cout << setw(3) << (i+1) << ". ";
+						this->fleet[i]->display();
+					}
+					cout << "     Wybierz jednostke" << endl << "     ";
+					cin >> unit;
+					while(!cin.good() || unit>= this->fleet.size()) {
+						cin.clear();
+						cin. ignore(1000, '\n');
+						cin >> unit;
+					}
+					temp = getUnit(unit);
+					temp->display();
+					cout << endl << "     Wybierz statek bojowy" << endl << "     ";
+						
+				}
+				else if(tolower(b) == 'b') {
+					
+				}
+				break;
+			case '4':
+				break;
+		}
+		cin.clear();
 }

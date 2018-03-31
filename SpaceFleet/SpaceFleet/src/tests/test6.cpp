@@ -26,6 +26,6 @@ int test6() {
 //	menu.extend(i);
 
 	Menu menu(5, 30, 25);
-	menu.hello();
+	menu.start();
 	return 0;
 }

@@ -62,8 +62,8 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/src_View.cpp$(ObjectSuffix) $(IntermediateDirectory)/test1.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_tests_Test.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_tests_test2.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_tests_test3.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_tests_test5.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_tests_test6.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Fleet.cpp$(ObjectSuffix) $(IntermediateDirectory)/Arsenal.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_tests_test4.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/Menu.cpp$(ObjectSuffix) $(IntermediateDirectory)/Ship.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_FileManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Weapon.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Combat.cpp$(ObjectSuffix) $(IntermediateDirectory)/Cargo.cpp$(ObjectSuffix) $(IntermediateDirectory)/Unit.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/test1.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_tests_Test.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_tests_test2.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_tests_test3.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_tests_test5.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_tests_test6.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_tests_test4.cpp$(ObjectSuffix) $(IntermediateDirectory)/Menu.cpp$(ObjectSuffix) $(IntermediateDirectory)/Ship.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_FileManager.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/src_View.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Fleet.cpp$(ObjectSuffix) $(IntermediateDirectory)/Arsenal.cpp$(ObjectSuffix) $(IntermediateDirectory)/Weapon.cpp$(ObjectSuffix) $(IntermediateDirectory)/Unit.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Combat.cpp$(ObjectSuffix) $(IntermediateDirectory)/Cargo.cpp$(ObjectSuffix) 
 
 
 
@@ -94,14 +94,6 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/src_View.cpp$(ObjectSuffix): src/View.cpp $(IntermediateDirectory)/src_View.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/src/View.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_View.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_View.cpp$(DependSuffix): src/View.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_View.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_View.cpp$(DependSuffix) -MM src/View.cpp
-
-$(IntermediateDirectory)/src_View.cpp$(PreprocessSuffix): src/View.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_View.cpp$(PreprocessSuffix) src/View.cpp
-
 $(IntermediateDirectory)/test1.cpp$(ObjectSuffix): test1.cpp $(IntermediateDirectory)/test1.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/test1.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/test1.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/test1.cpp$(DependSuffix): test1.cpp
@@ -150,22 +142,6 @@ $(IntermediateDirectory)/src_tests_test6.cpp$(DependSuffix): src/tests/test6.cpp
 $(IntermediateDirectory)/src_tests_test6.cpp$(PreprocessSuffix): src/tests/test6.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_tests_test6.cpp$(PreprocessSuffix) src/tests/test6.cpp
 
-$(IntermediateDirectory)/src_Fleet.cpp$(ObjectSuffix): src/Fleet.cpp $(IntermediateDirectory)/src_Fleet.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/src/Fleet.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Fleet.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_Fleet.cpp$(DependSuffix): src/Fleet.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Fleet.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Fleet.cpp$(DependSuffix) -MM src/Fleet.cpp
-
-$(IntermediateDirectory)/src_Fleet.cpp$(PreprocessSuffix): src/Fleet.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Fleet.cpp$(PreprocessSuffix) src/Fleet.cpp
-
-$(IntermediateDirectory)/Arsenal.cpp$(ObjectSuffix): Arsenal.cpp $(IntermediateDirectory)/Arsenal.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/Arsenal.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Arsenal.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Arsenal.cpp$(DependSuffix): Arsenal.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Arsenal.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Arsenal.cpp$(DependSuffix) -MM Arsenal.cpp
-
-$(IntermediateDirectory)/Arsenal.cpp$(PreprocessSuffix): Arsenal.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Arsenal.cpp$(PreprocessSuffix) Arsenal.cpp
-
 $(IntermediateDirectory)/src_tests_test4.cpp$(ObjectSuffix): src/tests/test4.cpp $(IntermediateDirectory)/src_tests_test4.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/src/tests/test4.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_tests_test4.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_tests_test4.cpp$(DependSuffix): src/tests/test4.cpp
@@ -198,6 +174,30 @@ $(IntermediateDirectory)/src_FileManager.cpp$(DependSuffix): src/FileManager.cpp
 $(IntermediateDirectory)/src_FileManager.cpp$(PreprocessSuffix): src/FileManager.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_FileManager.cpp$(PreprocessSuffix) src/FileManager.cpp
 
+$(IntermediateDirectory)/src_View.cpp$(ObjectSuffix): src/View.cpp $(IntermediateDirectory)/src_View.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/src/View.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_View.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_View.cpp$(DependSuffix): src/View.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_View.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_View.cpp$(DependSuffix) -MM src/View.cpp
+
+$(IntermediateDirectory)/src_View.cpp$(PreprocessSuffix): src/View.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_View.cpp$(PreprocessSuffix) src/View.cpp
+
+$(IntermediateDirectory)/src_Fleet.cpp$(ObjectSuffix): src/Fleet.cpp $(IntermediateDirectory)/src_Fleet.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/src/Fleet.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Fleet.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_Fleet.cpp$(DependSuffix): src/Fleet.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_Fleet.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_Fleet.cpp$(DependSuffix) -MM src/Fleet.cpp
+
+$(IntermediateDirectory)/src_Fleet.cpp$(PreprocessSuffix): src/Fleet.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Fleet.cpp$(PreprocessSuffix) src/Fleet.cpp
+
+$(IntermediateDirectory)/Arsenal.cpp$(ObjectSuffix): Arsenal.cpp $(IntermediateDirectory)/Arsenal.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/Arsenal.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Arsenal.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Arsenal.cpp$(DependSuffix): Arsenal.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Arsenal.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Arsenal.cpp$(DependSuffix) -MM Arsenal.cpp
+
+$(IntermediateDirectory)/Arsenal.cpp$(PreprocessSuffix): Arsenal.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Arsenal.cpp$(PreprocessSuffix) Arsenal.cpp
+
 $(IntermediateDirectory)/Weapon.cpp$(ObjectSuffix): Weapon.cpp $(IntermediateDirectory)/Weapon.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/Weapon.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Weapon.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Weapon.cpp$(DependSuffix): Weapon.cpp
@@ -205,6 +205,14 @@ $(IntermediateDirectory)/Weapon.cpp$(DependSuffix): Weapon.cpp
 
 $(IntermediateDirectory)/Weapon.cpp$(PreprocessSuffix): Weapon.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Weapon.cpp$(PreprocessSuffix) Weapon.cpp
+
+$(IntermediateDirectory)/Unit.cpp$(ObjectSuffix): Unit.cpp $(IntermediateDirectory)/Unit.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/Unit.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Unit.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Unit.cpp$(DependSuffix): Unit.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Unit.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Unit.cpp$(DependSuffix) -MM Unit.cpp
+
+$(IntermediateDirectory)/Unit.cpp$(PreprocessSuffix): Unit.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Unit.cpp$(PreprocessSuffix) Unit.cpp
 
 $(IntermediateDirectory)/src_main.cpp$(ObjectSuffix): src/main.cpp $(IntermediateDirectory)/src_main.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/src/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_main.cpp$(ObjectSuffix) $(IncludePath)
@@ -229,14 +237,6 @@ $(IntermediateDirectory)/Cargo.cpp$(DependSuffix): Cargo.cpp
 
 $(IntermediateDirectory)/Cargo.cpp$(PreprocessSuffix): Cargo.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Cargo.cpp$(PreprocessSuffix) Cargo.cpp
-
-$(IntermediateDirectory)/Unit.cpp$(ObjectSuffix): Unit.cpp $(IntermediateDirectory)/Unit.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Public/Documents/PROI/PROI_1.0/SpaceFleet/SpaceFleet/Unit.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Unit.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Unit.cpp$(DependSuffix): Unit.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Unit.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Unit.cpp$(DependSuffix) -MM Unit.cpp
-
-$(IntermediateDirectory)/Unit.cpp$(PreprocessSuffix): Unit.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Unit.cpp$(PreprocessSuffix) Unit.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

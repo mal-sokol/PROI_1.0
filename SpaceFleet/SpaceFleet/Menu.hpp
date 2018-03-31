@@ -20,10 +20,11 @@ public:
 	Menu(const int MARGIN, const int WIDTH, const int COLUMN);
 	~Menu();
 	
-	void hello();
+	void start();
 	void howManyUnits();
 	void whichShipType();
-	void header(unsigned int i, string name);
+	void inProgress(unsigned int i, string name);
+	void main();
 	void instructions();
 
 private:

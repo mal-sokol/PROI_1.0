@@ -20,7 +20,7 @@ int oldMain() { // zawartosc maina do rozdysponowania w oddzielne funkcje
 	Unit* unitPtr;
 	
 	Menu menu(5, 30, 25); // Menu poczatkowe
-	menu.hello();
+	menu.start();
 	cout << setw(5) << ' ';
 	cin >> a;
 	while(!cin.good() || (a!='c' && a!='q')) {
@@ -68,7 +68,7 @@ int oldMain() { // zawartosc maina do rozdysponowania w oddzielne funkcje
 			cin >> numS;
 		}
 		for(int i = 0; i<numS; i++) {
-			menu.header(i, nameU);
+			menu.inProgress(i, nameU);
 			menu.whichShipType(); // Wybor typu tworzonego statku a - Ship, b - Combat, c - Cargo
 			cin >> shipType;
 			while(!cin.good() || (shipType != 'a' && shipType != 'b' && shipType != 'c')) { // Tworzenie wybranego rodzaju statku
