@@ -23,6 +23,7 @@ public:
 	
 	void start();
 	void howManyUnits();
+	void howManyWeapons();
 	void whichShipType();
 	void inProgress(unsigned int i, string name);
 	void main();

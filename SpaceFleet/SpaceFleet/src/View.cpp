@@ -133,6 +133,50 @@ Ship* View::createShip() {
 	return shipPtr;
 }
 
+Weapon* View::createWeapon() {
+	
+	string nameW;
+	Weapon* weaponPtr;
+	
+	cout << endl << setw(5) << ' ';
+	cout << "Wpisz nazwe broni: ";
+	cout << setw(5) << ' ';
+	
+	cin >> nameW;
+	while(!cin.good()) {
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cout << setw(5) << ' ';
+		cin >> nameW;
+	}
+	weaponPtr = new Weapon(nameW);
+	
+	return weaponPtr;
+}
+
+Arsenal* View::createArsenal() {
+	
+	int numW;
+	Weapon* weaponPtr;
+	
+	Arsenal* arsenalPtr = new Arsenal();
+	
+	menu->howManyWeapons(); // Ustalanie liczby tworzonych unitow
+	cin >> numW;
+	while(!cin.good() || (numW<1)) {
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cout << setw(5) << ' ';
+		cin >> numW;
+	}
+	
+	for(int j = 0; j<numW; j++) {
+		weaponPtr = createWeapon();
+		arsenalPtr->add(weaponPtr);
+	}
+	return arsenalPtr;
+}
+
 void View::chooseFromMain(Fleet* myFleet) {
 	
 	int choice;
@@ -146,6 +190,7 @@ void View::chooseFromMain(Fleet* myFleet) {
 				
 				myFleet->display();
 				cin.ignore(1000, '\n');
+				showMain();
 				break;
 			case 2:
 				

@@ -25,6 +25,12 @@ void Menu::howManyUnits() {
 		<< setw(margin) << ' ' << "Ile jednostek we flocie?" << setw(margin) << ' ' ;
 }
 
+void Menu::howManyWeapons() {
+	
+	cout << endl
+		<< setw(margin) << ' ' << "Ile elementow broni chcesz stworzyc?" << setw(margin) << ' ' ;
+}
+
 void Menu::whichShipType() {
 	cout << endl
 		<< setw(margin+5) << ' ' << "Jaki statek chcesz dodac?" << endl << left

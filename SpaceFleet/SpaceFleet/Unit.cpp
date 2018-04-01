@@ -42,7 +42,7 @@ void Unit::add(Ship* member) {
 
 void Unit::display() {
 	
-	const int width = 12;
+	const int width = 13;
 	int margin = 5;
 	cout.precision(2);
 	cout << fixed;
@@ -57,20 +57,20 @@ void Unit::display() {
 }
 
 void Unit::displayMembers() {
-	const int width = 12;
+	const int width = 13;
 	cout.precision(2);
 	cout << fixed;
 	unsigned int size = this->unit.size();
 	if(size) {
 		cout<< "     "
-			<< setw(width) << left << "IMIE"
-			<< setw(width) << "PREDKOSC"
-			<< setw(width) << "ZASIEG"
+			<< setw(width) << left << "NAZWA"
+			<< setw(width) << "PREDKOSC(%c)"
+			<< setw(width) << "ZASIEG(ly)"
 			<< setw(width) << "WYTRZYMALOSC"
 			<< setw(width) << "FORMACJA" << endl
 			<< setfill('-') << setw(5*width + 7) << '-' << setfill(' ') << endl;
 		for( unsigned int i = 0; i < size; i++ ) {
-			cout << setw(3) << i+1 << ". ";
+			cout << right << setw(3) << i+1 << ". ";
 			this->unit[i]->display();
 			cout << endl;
 		}

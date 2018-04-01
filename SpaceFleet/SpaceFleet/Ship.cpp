@@ -43,15 +43,15 @@ Ship::~Ship()
 
 void Ship::display() {
 	
-	const int width = 12;
+	const int width = 13;
 	
 	cout.precision(2);
 	cout<< dec
-		<< setw(width) << left << this->name
-		<< setw(width-3) << this->velocity << " %c"
-		<< setw(width-3) << this->scope << " ly"
-		<< setw(width-3) << this->durability << " % "
-		<< setw(width) << this->formationToString();
+		<< setw(width-5) << left << this->name
+		<< setw(width) << this->velocity
+		<< setw(width) << this->scope
+		<< setw(width) << this->durability
+		<< setw(width-5) << this->formationToString();
 }
 
 string Ship::formationToString() const {

@@ -22,7 +22,7 @@
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Unit.cpp" Name="FileName"/>
       <int Value="41" Name="FirstVisibleLine"/>
-      <int Value="56" Name="CurrentLine"/>
+      <int Value="59" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -30,13 +30,6 @@
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Cargo.hpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
       <int Value="17" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Cargo.cpp" Name="FileName"/>
-      <int Value="9" Name="FirstVisibleLine"/>
-      <int Value="15" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -120,7 +113,7 @@
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\src\tests\Test.cpp" Name="FileName"/>
       <int Value="3" Name="FirstVisibleLine"/>
-      <int Value="39" Name="CurrentLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -182,7 +175,7 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\Public\Documents\PROI\PROI_1.0\SpaceFleet\SpaceFleet\Fleet.cpp" Name="FileName"/>
-      <int Value="114" Name="FirstVisibleLine"/>
+      <int Value="0" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
