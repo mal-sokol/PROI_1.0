@@ -31,6 +31,10 @@ public:
 //	Unit* getUnit(string name);
 	Weapon* getWeapon(unsigned int chosen);
 	vector<Unit*> getFleet() {return fleet;}
+	
+	void attachArsenal(); // podac przez parametr wskaznik czy, referencje?
+							// flota ma Arseenal, nie wskaznik na Arsenal 
+	
 	void findBest(char criteria);
 	
 	bool cmpVelocity (Unit* i,Unit* j) { return (i->getVelocity() < j->getVelocity()); }
