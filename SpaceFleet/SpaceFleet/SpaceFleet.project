@@ -93,10 +93,12 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="Test.cpp"/>
+    <File Name="Test.hpp"/>
+    <File Name="View.hpp"/>
+    <File Name="View.cpp"/>
     <File Name="Fleet.hpp"/>
     <File Name="Fleet.cpp"/>
-    <File Name="src/View.cpp"/>
-    <File Name="src/View.hpp"/>
     <File Name="src/FileManager.cpp"/>
     <File Name="src/FileManager.hpp"/>
     <File Name="Menu.cpp"/>
@@ -114,8 +116,6 @@
       <File Name="src/tests/test4.cpp"/>
       <File Name="src/tests/test3.cpp"/>
       <File Name="src/tests/test2.cpp"/>
-      <File Name="src/tests/Test.cpp"/>
-      <File Name="src/tests/Test.hpp"/>
       <File Name="test1.cpp"/>
     </VirtualDirectory>
     <File Name="Cargo.cpp"/>

@@ -11,8 +11,6 @@
 
 using namespace std;
 
-string shipFlex(int num);
-
 int test6() {
 //	int i;
 //	Menu menu(5, 30, 10);

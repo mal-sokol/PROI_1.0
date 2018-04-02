@@ -29,7 +29,7 @@ public:
 	
 	void showInstructions() {menu->instructions();}
 	void showMain();
-	void chooseFromMain(Fleet* myFleet);
+	void chooseFromMain();
 	
 private:
 	Menu* menu;

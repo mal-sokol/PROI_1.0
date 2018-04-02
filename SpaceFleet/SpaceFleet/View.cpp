@@ -7,7 +7,7 @@ View::View()
 
 View::~View()
 {
-//	menu.~Menu(); ???
+	delete menu;
 }
 
 bool View::start() {
@@ -161,7 +161,7 @@ Arsenal& View::createArsenal() {
 	
 	Arsenal& arsenalRef = *(new Arsenal());
 	
-	menu->howManyWeapons(); // Ustalanie liczby tworzonych unitow
+	menu->howManyWeapons();
 	cin >> numW;
 	while(!cin.good() || (numW<1)) {
 		cin.clear();
@@ -177,7 +177,7 @@ Arsenal& View::createArsenal() {
 	return arsenalRef;
 }
 
-void View::chooseFromMain(Fleet* myFleet) {
+void View::chooseFromMain() {
 	
 	int choice;
 	cin >> choice;
@@ -189,11 +189,23 @@ void View::chooseFromMain(Fleet* myFleet) {
 //				system("clear");
 				
 				myFleet->display();
-				cin.ignore(1000, '\n');
-				showMain();
+//				cin.ignore(1000, '\n');
+				menu->main();
+				
+				cin.clear();
+				cin >> choice;
 				break;
 			case 2:
-				myFleet->attachArsenal(createArsenal());
+				if(myFleet->getArsenal() == NULL) {
+					myFleet->attachArsenal(createArsenal());  // w przypadku istniejacego arsenalu zostaje nadpisany!!!!
+				}
+				else {
+					
+				}
+				cin.ignore(1000, '\n');
+				menu->main();
+				cin.clear();
+				cin >> choice;
 				break;
 			case 3:
 				
@@ -207,7 +219,7 @@ void View::chooseFromMain(Fleet* myFleet) {
 
 void View::showMain() {
 	menu->main();
-	chooseFromMain(myFleet);
+	chooseFromMain();
 }
 
 

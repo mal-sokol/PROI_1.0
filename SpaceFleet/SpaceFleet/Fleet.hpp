@@ -26,7 +26,7 @@ public:
 	void assignWeapon(Unit* unit, Combat* ship, Weapon* weapon);
 	void removeWeapon(unsigned int unit, unsigned int ship);
 	
-	Arsenal* getArsenal() {return &myArsenal;}
+	Arsenal* getArsenal() {return &myArsenal;} // co jesli nie dodano arsenalu??
 	Unit* getUnit(unsigned int chosen);
 //	Unit* getUnit(string name);
 	Weapon* getWeapon(unsigned int chosen);

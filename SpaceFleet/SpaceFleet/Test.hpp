@@ -1,6 +1,17 @@
 #ifndef TEST_HPP
 #define TEST_HPP
 
+#include <iostream>
+#include <string>
+
+#include "Ship.hpp"
+#include "Cargo.hpp"
+#include "Combat.hpp"
+#include "Weapon.hpp"
+#include "Fleet.hpp"
+#include "Menu.hpp"
+#include "View.hpp"
+
 class Test
 {
 public:
@@ -13,6 +24,7 @@ public:
 	int test4(); //dodaje wskaznik na Weapon do obiektu Combat
 	int test5(); //tworzy unit i dodaje do niego wskazania na statki, wylicza parametry unitu i je wyswietla
 	int test6(); //wyswietla menu
+	int test7(); //Jakie parametry floty nadaje konstruktor? Test funkcji Fleet::display()
 };
 
 #endif // TEST_HPP
