@@ -23,7 +23,7 @@ public:
 	void createFleet();
 	Unit* createUnit();
 	Ship* createShip();
-	Arsenal* createArsenal();
+	Arsenal& createArsenal();
 	Weapon* createWeapon();
 	int oldMain(); // zawartosc maina do rozdysponowania w oddzielne funkcje
 	

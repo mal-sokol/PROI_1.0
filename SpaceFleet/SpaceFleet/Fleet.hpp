@@ -32,8 +32,7 @@ public:
 	Weapon* getWeapon(unsigned int chosen);
 	vector<Unit*> getFleet() {return fleet;}
 	
-	void attachArsenal(); // podac przez parametr wskaznik czy, referencje?
-							// flota ma Arseenal, nie wskaznik na Arsenal 
+	void attachArsenal(Arsenal& newArsenal) {this->myArsenal = newArsenal;} 
 	
 	void findBest(char criteria);
 	

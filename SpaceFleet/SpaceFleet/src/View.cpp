@@ -154,12 +154,12 @@ Weapon* View::createWeapon() {
 	return weaponPtr;
 }
 
-Arsenal* View::createArsenal() {
+Arsenal& View::createArsenal() {
 	
 	int numW;
 	Weapon* weaponPtr;
 	
-	Arsenal* arsenalPtr = new Arsenal();
+	Arsenal& arsenalRef = *(new Arsenal());
 	
 	menu->howManyWeapons(); // Ustalanie liczby tworzonych unitow
 	cin >> numW;
@@ -172,9 +172,9 @@ Arsenal* View::createArsenal() {
 	
 	for(int j = 0; j<numW; j++) {
 		weaponPtr = createWeapon();
-		arsenalPtr->add(weaponPtr);
+		arsenalRef.add(weaponPtr);
 	}
-	return arsenalPtr;
+	return arsenalRef;
 }
 
 void View::chooseFromMain(Fleet* myFleet) {
@@ -193,7 +193,7 @@ void View::chooseFromMain(Fleet* myFleet) {
 				showMain();
 				break;
 			case 2:
-				
+				myFleet->attachArsenal(createArsenal());
 				break;
 			case 3:
 				

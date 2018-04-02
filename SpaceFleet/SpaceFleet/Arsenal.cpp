@@ -37,6 +37,22 @@ Arsenal::~Arsenal() {
 
 }
 
+Arsenal& Arsenal::operator= (const Arsenal& other) {
+	
+	if(this != &other) {
+		for(unsigned int i = 0; i < other.arsenal.size(); i++) {
+			if(i < this->arsenal.size()) {
+				cout << this->arsenal[i]->getName() << " destroyed" << endl;
+				delete this->arsenal[i];
+			}
+			Weapon& ref = *other.arsenal[i];
+			Weapon* ptr = new Weapon(ref);
+			this->arsenal.push_back(ptr);
+		}
+	}
+	return *this;
+}
+
 void Arsenal::display() {
 	int width = 12;
 	unsigned int size = this->arsenal.size();

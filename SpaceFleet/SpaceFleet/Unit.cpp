@@ -272,11 +272,13 @@ Unit& Unit::operator= (const Unit& other) {
 		capacity = other.capacity;
 		
 		for(unsigned int i = 0; i < other.unit.size(); i++) {
-		cout << this->unit[i]->getName() << " destroyed" << endl;
-		delete this->unit[i];
-		Ship& ref = *other.unit[i];
-		Ship* ptr = new Ship(ref);
-		this->unit.push_back(ptr);
+			if(i < this->unit.size()) {
+				cout << this->unit[i]->getName() << " destroyed" << endl;
+				delete this->unit[i];
+			}
+			Ship& ref = *other.unit[i];
+			Ship* ptr = new Ship(ref);
+			this->unit.push_back(ptr);
 		}
 	}
 	return *this;

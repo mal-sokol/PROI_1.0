@@ -16,6 +16,7 @@ public:
 	Arsenal();
 	Arsenal(const Arsenal& toCopyFrom);
 	~Arsenal();
+	Arsenal& operator= (const Arsenal& other);
 	
 	void display();
 	void add(Weapon* weapon);
