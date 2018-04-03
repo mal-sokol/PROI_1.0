@@ -46,9 +46,9 @@ void Combat::loseWeapon() {
 void Combat::display() {
 	
 	this->Ship::display();
-	cout<< "  combat value: " << this->getCombatValue();
+	cout<< "  WB: " << this->getCombatValue();
 	if(this->weapon) {
-		cout<< "  equiped with: " << (*this->weapon).getName();
+		cout<< "  (" << (*this->weapon).getName() << ")";
 	}
 }
 

@@ -54,7 +54,7 @@ Arsenal::~Arsenal() {
 //}
 
 void Arsenal::display() {
-	int width = 12;
+	int width = 13;
 	unsigned int size = this->arsenal.size();
 	if(size) {
 			cout<< setw(5*width + 5) << right << "WARTOSC" << endl <<  "     "

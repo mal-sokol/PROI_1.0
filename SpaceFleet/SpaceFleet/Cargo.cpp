@@ -26,7 +26,7 @@ Cargo::~Cargo() {
 
 void Cargo::display() {
 	this->Ship::display();
-	cout<< "  capacity: " << this->capacity << " Mt";
+	cout<< "  L: " << this->capacity << " Mt";
 }
 
 Cargo& Cargo::operator= (const Cargo& other) {

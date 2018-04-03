@@ -48,7 +48,7 @@ void Unit::display() {
 	cout << fixed;
 	cout<< endl
 		<< "Parametry jednostki " << setw(width) << left << this->name << right << endl
-		<< setfill('-') << setw(5*width + 7) << '-' << setfill(' ') << endl
+		<< setfill('-') << setw(5*width + 5) << '-' << setfill(' ') << endl
 		<< setw(margin) << ' ' << "PREDKOSC: " << this->velocity << " %c" << endl
 		<< setw(margin) << ' ' << "ZASIEG: " << this->scope << " ly" << endl
 		<< setw(margin) << ' ' << "WYTRZYMALOSC: " << this->durability << " %" << endl
@@ -62,13 +62,14 @@ void Unit::displayMembers() {
 	cout << fixed;
 	unsigned int size = this->unit.size();
 	if(size) {
+		
 		cout<< "     "
-			<< setw(width) << left << "NAZWA"
+			<< setw(width) << left << "NAZWA" << right
 			<< setw(width) << "PREDKOSC(%c)"
 			<< setw(width) << "ZASIEG(ly)"
 			<< setw(width) << "WYTRZYMALOSC"
 			<< setw(width) << "FORMACJA" << endl
-			<< setfill('-') << setw(5*width + 7) << '-' << setfill(' ') << endl;
+			<< setfill('-') << setw(5*width + 5) << '-' << setfill(' ') << endl;
 		for( unsigned int i = 0; i < size; i++ ) {
 			cout << right << setw(3) << i+1 << ". ";
 			this->unit[i]->display();
