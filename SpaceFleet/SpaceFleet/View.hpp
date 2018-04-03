@@ -28,7 +28,6 @@ public:
 	int oldMain(); // zawartosc maina do rozdysponowania w oddzielne funkcje
 	
 	void showInstructions() {menu->instructions();}
-	void showMain();
 	void chooseFromMain();
 	void chooseFormation();
 	void formation(int choice);

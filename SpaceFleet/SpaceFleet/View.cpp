@@ -180,9 +180,13 @@ void View::fillArsenal() {
 void View::chooseFromMain() {
 	
 	int choice;
+	char which;
+	
+	menu->main();
+	
 	cin >> choice;
 	
-	while(cin.good() && (choice>0 || choice<5)) {
+	while(cin.good() && choice>0 && choice<5) {
 		switch(choice) {
 			case 1:
 				system("cls");
@@ -219,16 +223,21 @@ void View::chooseFromMain() {
 				cin >> choice;
 				break;
 			case 4:
-				
+				menu->criteria();
+				cin >> which;
+				while(!cin.good() || tolower(which) < 'a' || tolower(which) > 'e') {
+					cin.ignore(1000, '\n');
+					cin.clear();
+					cin >> which;
+				}
+				myFleet->findBest(which);
 				break;
 		}
+		cin.ignore(1000, '\n');
+		cin >> choice;
 	}
 }
 
-void View::showMain() {
-	menu->main();
-	chooseFromMain();
-}
 
 
 void View::chooseFormation() {
@@ -293,7 +302,7 @@ void View::formation(int choice) {
 	cout << endl
 	<< setw(margin) << ' ' << "Podaj pozycje wybranwej jenostki lub przejdz dalej: " << setw(margin) << ' ' ;
 	cin >> whichUnit;
-	cin.ignore(1000, '\n');
+//	cin.ignore(1000, '\n');
 	
 	while(cin.good() && (whichUnit > 0 && whichUnit <= size)) {
 		
@@ -306,13 +315,15 @@ void View::formation(int choice) {
 		
 		unsigned int unitSize = myFleet->getUnit(whichUnit)->getNumOfShips();
 		
-		cout << setw(margin) << ' ' << "Podaj pozycje wybranego statku lub zmien jednostke: " << setw(margin) << ' ' ;
-		cin.clear();
+		cout << setw(margin) << ' ' << "Podaj pozycje wybranego statku: " << setw(margin) << ' ' ;
+//		cin.clear();
 		cin >> whichShip;
-		cin.ignore(1000, '\n');
+
 		
 		while(cin.good() && whichShip > 0 && whichShip <= unitSize) {
 			
+			
+			cin.ignore(1000, '\n');
 			system("cls");
 //			system("clear");
 			formationHeader(choice);
@@ -331,12 +342,12 @@ void View::formation(int choice) {
 			myFleet->getUnit(whichUnit)->displayMembers();
 			cout << setw(margin) << ' ' << "Podaj pozycje wybranego statku lub przejdz dalej: " << setw(margin) << ' ' ;
 			
-			cin.ignore(1000, '\n');
+//			cin.ignore(1000, '\n');
 //			cin.clear();
 			cin >> whichShip;
 		}
 //		cin.ignore(1000, '\n');
-		cin.clear();
+//		cin.sync();
 		
 		system("cls");
 //		system("clear");

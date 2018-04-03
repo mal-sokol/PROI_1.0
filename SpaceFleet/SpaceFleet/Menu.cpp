@@ -128,6 +128,16 @@ void Menu::extendMain(int option) {
 		<< setw(margin);
 }
 
+void Menu::criteria() {
+	cout << endl 
+		<< setw(margin + 4) << ' ' << "Podaj kryterium:" << endl
+		<< setw(margin + 4) << ' ' << "A. Predkosc" << endl
+		<< setw(margin + 4) << ' ' << "B. Zasieg" << endl
+		<< setw(margin + 4) << ' ' << "C. Wytrzymalosc" << endl
+		<< setw(margin + 4) << ' ' << "D. Wartosc bojowa" << endl
+		<< setw(margin + 4) << ' ' << "E. Ladunek" << endl << endl;
+}
+
 
 //void Menu::choose(Fleet& myFleet, int option) {
 //	

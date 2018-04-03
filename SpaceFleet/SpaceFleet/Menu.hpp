@@ -30,6 +30,7 @@ public:
 	void extendMain(int option);
 	void instructions();
 	void formations();
+	void criteria();
 //	void choose(Fleet& myFleet, int option);
 
 private:
