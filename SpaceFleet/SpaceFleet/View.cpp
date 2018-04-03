@@ -238,10 +238,13 @@ void View::chooseFormation() {
 	int choice;
 	cin >> choice;
 	
-	while(cin.good() && (choice>=0 || choice<5)) {
+	while(cin.good() && choice>=0 && choice<5) {
 		formation(choice);
 		menu->formations();
+		cin >> choice;
 	}
+	cin.ignore(1000, '\n');
+	cin.clear();
 }
 
 void View::formationHeader(int choice) {
@@ -290,8 +293,13 @@ void View::formation(int choice) {
 	cout << endl
 	<< setw(margin) << ' ' << "Podaj pozycje wybranwej jenostki lub przejdz dalej: " << setw(margin) << ' ' ;
 	cin >> whichUnit;
+	cin.ignore(1000, '\n');
 	
 	while(cin.good() && (whichUnit > 0 && whichUnit <= size)) {
+		
+		system("cls");
+//		system("clear");
+		formationHeader(choice);
 		
 		myFleet->getUnit(whichUnit)->display();
 		myFleet->getUnit(whichUnit)->displayMembers();
@@ -301,6 +309,7 @@ void View::formation(int choice) {
 		cout << setw(margin) << ' ' << "Podaj pozycje wybranego statku lub zmien jednostke: " << setw(margin) << ' ' ;
 		cin.clear();
 		cin >> whichShip;
+		cin.ignore(1000, '\n');
 		
 		while(cin.good() && whichShip > 0 && whichShip <= unitSize) {
 			
@@ -333,9 +342,9 @@ void View::formation(int choice) {
 		
 		myFleet->shortDisplay();
 		cout << endl
-		<< setw(margin) << ' ' << "Podaj pozycje wybranwej jenostki lub przejdz dalej: " << setw(margin) << ' ' ;
+			<< setw(margin) << ' ' << "Podaj pozycje wybranwej jenostki lub przejdz dalej: " << setw(margin) << ' ' ;
 		cin >> whichUnit;
-		cin.ignore(1000, '\n');
+//		cin.ignore(1000, '\n');
 	}
 	cin.ignore(1000, '\n');
 	cin.clear();
