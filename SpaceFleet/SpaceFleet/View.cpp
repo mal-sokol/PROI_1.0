@@ -52,7 +52,7 @@ void View::createFleet() {
 	
 	
 	myFleet = fleetPtr;
-	myFleet->shortDisplay();
+//	myFleet->shortDisplay();
 }
 
 Unit* View::createUnit() {
@@ -208,7 +208,15 @@ void View::chooseFromMain() {
 				cin >> choice;
 				break;
 			case 3:
+				chooseFormation();
+				cin.ignore(1000, '\n');
 				
+				system("cls");
+//				system("clear");
+
+				menu->main();
+				cin.clear();
+				cin >> choice;
 				break;
 			case 4:
 				
@@ -225,53 +233,44 @@ void View::showMain() {
 
 void View::chooseFormation() {
 	
-	int margin = 5;
-	int width = 13;
 	menu->formations();
 	
 	int choice;
 	cin >> choice;
 	
 	while(cin.good() && (choice>=0 || choice<5)) {
-		switch(choice) {
-			case 0:
-				
-				break;
-			case 1:
-				system("cls");
-//				system("clear");
-				cout << endl
-				<< setw(margin-2) << ' ' << right << setfill('*') << setw(width) << " " << "LINE" << left << setw(width) << " " << setfill(' ') << endl << endl;
+		formation(choice);
+		menu->formations();
+	}
+}
 
-
-				cin.ignore(1000, '\n');
-				menu->formations();
-				cin.clear();
-				cin >> choice;
-				break;
-			case 2:
-				cout << endl
-				<< setw(margin-2) << ' ' << right << setfill('*') << setw(width-1) << " " << "MATRIX" << left << setw(width-1) << " " << setfill(' ') << endl << endl;
-
-
-				system("cls");
-//				system("clear");
-				cin.ignore(1000, '\n');
-				menu->formations();
-				cin.clear();
-				cin >> choice;
-				break;
-			case 3:
-				cout << endl
-				<< setw(margin-2) << ' ' << right << setfill('*') << setw(width-1) << " " << "SPEARE" << left << setw(width-1) << " " << setfill(' ') << endl << endl;
-				
-				break;
-			case 4:
-				cout << endl
-				<< setw(margin-2) << ' ' << right << setfill('*') << setw(width) << " " << "CUBE" << left << setw(width-1) << " " << setfill(' ') << endl << endl;
-				
-				break;
-		}
+void View::formationHeader(int choice) {
+	
+	int margin = 5;
+	int width = 35;
+	
+	switch(choice) {
+		case 0:
+			cout << endl
+			<< setw(margin-2) << ' ' << right << setfill('*') << setw(width-7) << " " 
+			<< "USUWANIE Z FORMACJI" << left << setw(width-8) << " " << setfill(' ') << endl << endl;
+			break;
+		case 1:
+			cout << endl
+			<< setw(margin-2) << ' ' << right << setfill('*') << setw(width) << " " << "LINE" << left << setw(width) << " " << setfill(' ') << endl << endl;
+			break;
+		case 2:
+			cout << endl
+			<< setw(margin-2) << ' ' << right << setfill('*') << setw(width-1) << " " << "MATRIX" << left << setw(width-1) << " " << setfill(' ') << endl << endl;
+			break;
+		case 3:
+			cout << endl
+			<< setw(margin-2) << ' ' << right << setfill('*') << setw(width-1) << " " << "SPEARE" << left << setw(width-1) << " " << setfill(' ') << endl << endl;
+			break;
+		case 4:
+			cout << endl
+			<< setw(margin-2) << ' ' << right << setfill('*') << setw(width) << " " << "CUBE" << left << setw(width-1) << " " << setfill(' ') << endl << endl;
+			break;
 	}
 }
 
@@ -282,12 +281,17 @@ void View::formation(int choice) {
 	unsigned int whichUnit, whichShip;
 	unsigned int size = myFleet->howManyUnits();
 	
+	system("cls");
+//	system("clear");
+	
+	
+	formationHeader(choice);
 	myFleet->shortDisplay();
 	cout << endl
 	<< setw(margin) << ' ' << "Podaj pozycje wybranwej jenostki lub przejdz dalej: " << setw(margin) << ' ' ;
 	cin >> whichUnit;
-	cin.ignore(1000, '\n');
-	while(cin.good() && (whichUnit > 0 && whichUnit < size)) {
+	
+	while(cin.good() && (whichUnit > 0 && whichUnit <= size)) {
 		
 		myFleet->getUnit(whichUnit)->display();
 		myFleet->getUnit(whichUnit)->displayMembers();
@@ -295,12 +299,14 @@ void View::formation(int choice) {
 		unsigned int unitSize = myFleet->getUnit(whichUnit)->getNumOfShips();
 		
 		cout << setw(margin) << ' ' << "Podaj pozycje wybranego statku lub zmien jednostke: " << setw(margin) << ' ' ;
+		cin.clear();
 		cin >> whichShip;
 		
-		while(cin.good() && (whichUnit > 0 || whichUnit < unitSize)) {
+		while(cin.good() && whichShip > 0 && whichShip <= unitSize) {
 			
 			system("cls");
 //			system("clear");
+			formationHeader(choice);
 			
 			myFleet->getUnit(whichUnit)->getShip(whichShip)->setFormation(formation);
 			
@@ -310,7 +316,7 @@ void View::formation(int choice) {
 			myFleet->getUnit(whichUnit)->setCombatValue();
 			myFleet->getUnit(whichUnit)->setCapacity();
 			
-			cin.ignore(1000, '\n');
+//			cin.ignore(1000, '\n');
 			cin.clear();
 			myFleet->getUnit(whichUnit)->display();
 			myFleet->getUnit(whichUnit)->displayMembers();
@@ -322,6 +328,8 @@ void View::formation(int choice) {
 		
 		system("cls");
 //		system("clear");
+
+		formationHeader(choice);
 		
 		myFleet->shortDisplay();
 		cout << endl

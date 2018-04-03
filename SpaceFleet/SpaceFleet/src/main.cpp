@@ -18,8 +18,8 @@ int main() {
 	if(view->start()) {
 		view->createFleet();
 		
-//		view->showInstructions();
-//		view->showMain();
+		view->showInstructions();
+		view->showMain();
 	}
 	delete view;
 

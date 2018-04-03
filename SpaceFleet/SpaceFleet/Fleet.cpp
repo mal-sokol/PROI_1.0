@@ -52,7 +52,7 @@ Unit* Fleet::getUnit(unsigned int chosen) {
 	unsigned int size;
 	size = this->fleet.size();
 	
-	if(chosen<size) {
+	if((chosen-1) < size) {
 		return this->fleet[chosen-1];
 	}
 	else {

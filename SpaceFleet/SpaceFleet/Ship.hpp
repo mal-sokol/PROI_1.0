@@ -10,7 +10,7 @@ using namespace std;
 #define SHIP_HPP
 
 enum formationType {
-	none, line, matrix, spear, cube
+	none = 0, line = 1, matrix = 2, spear = 3, cube = 4
 };
 
 class Ship
