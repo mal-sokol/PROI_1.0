@@ -13,7 +13,7 @@ void Menu::start() {
 //	int column = 25;
 	
 	cout << endl
-		<< setw(margin-2) << ' ' << setfill('*') << setw(width) << " " << "WITAJ" << " " << setw(width) << " " << setfill(' ') << endl << endl
+		<< setw(margin-2) << ' ' << right << setfill('*') << setw(width) << " " << "WITAJ" << left << setw(width) << " " << setfill(' ') << endl << endl
 		<< setw(margin+6) << ' ' << "Stworz flote pozaziemskich statkow kosmicznych"<< endl << endl 
 		<< setw(margin-2) << ' ' << setfill('*') << setw(2*width + 6) << " " << setfill(' ') << endl
 		<< setw(margin) << ' ' << "kliknij c, aby kontynuowac      q - wyjscie z programu" << endl;
@@ -46,7 +46,7 @@ void Menu::inProgress(unsigned int i, string name) {
 	system("cls");
 	
 	cout << endl
-		<< setw(margin-2) << ' ' << setfill('*') << setw(width-8) << " " << "W TRAKCIE TWORZENIA" << " " << setw(width-8) << "*" << setfill(' ') << endl << endl
+		<< setw(margin-2) << ' ' << right << setfill('*') << setw(width-8) << " " << "W TRAKCIE TWORZENIA" << left << setw(width-8) << " " << setfill(' ') << endl << endl
 		<< setw(margin+10) << ' ' << i+1 << ". Statku jednoski "<< name << endl << endl
 		<< setw(margin-2) << ' ' << setfill('*') << setw(2*width + 6) << " " << setfill(' ') << endl << endl
 		<< setw(margin);
@@ -59,19 +59,36 @@ void Menu::instructions() {
 	system("cls");
 	
 	cout << endl
-		<< setw(margin-2) << ' ' << setfill('*') << setw(width-10) << " " << "UDALO SIE STWORZYC FLOTE" << " " << setw(width-10) << "*" << setfill(' ') << endl << endl
+		<< setw(margin-2) << ' ' << right << setfill('*') << setw(width-10) << " " << "UDALO SIE STWORZYC FLOTE" << left << setw(width-10) << " " << setfill(' ') << endl << endl
 		<< setw(margin+5) << ' ' << "Parametry statkow zostaly przypisane losowo."<< endl
 		<< setw(margin+5) << ' ' << "Mozesz modyfikowac je dodajac bron z arsenalu do" << endl
 		<< setw(margin+5) << ' ' << "statkow bojowych lub dolaczajac statki do formacji." << endl
 		<< setw(margin+5) << ' ' << "Twoj arsenal jest jeszcze pusty."<< endl << endl;
-//		<< setw(margin-2) << ' ' << setfill('*') << setw(2*width + 6) << " " << setfill(' ') << endl << endl
-//		<< setw(margin);
+}
+
+void Menu::formations() {
+	
+//	system("clear");
+	system("cls");
+	
+	cout << endl
+		<< setw(margin-2) << ' ' << right << setfill('*') << setw(width-6) << " " << "DOSTEPNE FORMACJE" << left << setw(width-7) << " " << setfill(' ') << endl << endl
+		<< setw(margin+5) << ' ' << "1) LINE - pozwala zoptymalizowac predkosc jednostki"<< endl
+		<< setw(margin+5) << ' ' << "2) MATRIX - optymalizuje zasieg " << endl
+		<< setw(margin+5) << ' ' << "3) SPEARE - optymalizuje wartosc bojowa jednostki" << endl
+		<< setw(margin+5) << ' ' << "4) CUBE - optymalizuje wytrzymalosc"<< endl << endl
+		<< setw(margin-2) << ' ' << setfill('*') << setw(2*width + 6) << " " << setfill(' ') << endl
+		<< setw(margin) << ' ' << "Wplyw formacji na jednostke moze zalezec od ilosci statkow w danej formacji" << endl
+		<< setw(margin) << ' ' << "Optymalizacja jednego moze odbywac sie kosztem innych parametrow jednostki." << endl
+		<< setw(margin-2) << ' ' << setfill('*') << setw(2*width + 6) << " " << setfill(' ') << endl << endl
+		<< setw(margin) << ' ' << " Podaj numer wybranej pozycji (lub 0, aby usunac statek z formacji)." << endl
+		<< setw(margin-2) << ' ';
 }
 
 void Menu::main() {
 	
 	cout << endl
-		<< setw(margin-2) << ' ' << setfill('*') << setw(width) << " " << "MENU" << " " << setw(width) << " " << setfill(' ') << endl
+		<< setw(margin-2) << ' ' << right << setfill('*') << setw(width) << " " << "MENU" << left << setw(width) << " " << setfill(' ') << endl << endl
 		<< setw(margin) << ' ' << "1) Zobacz swoja flote" << endl
 		<< setw(margin) << ' ' << "2) Dodaj bron do arsenalu" << endl
 		<< setw(margin) << ' ' << "3) Ustaw w formacje" << endl

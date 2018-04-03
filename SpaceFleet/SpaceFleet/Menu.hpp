@@ -29,6 +29,7 @@ public:
 	void main();
 	void extendMain(int option);
 	void instructions();
+	void formations();
 //	void choose(Fleet& myFleet, int option);
 
 private:

@@ -132,3 +132,36 @@ void Fleet::display() {
 		cout << endl;
 	}
 }
+
+void Fleet::shortDisplay() {
+	
+	cout.precision(2);
+	cout << fixed;
+	
+	int width = 13;
+	unsigned int size = this->fleet.size();
+	if(size) {
+			cout<< setw(6*width) << right << "WARTOSC" << endl <<  "     "
+				<< setw(width-1) << left << "NAZWA" << right
+				<< setw(width-5) << "PREDKOSC"
+				<< setw(width) << "ZASIEG"
+				<< setw(width+1) << "WYTRZYMALOSC"
+				<< setw(width) << "LADUNEK"
+				<< setw(width) << "BOJOWA" << endl
+				<< setfill('-') << setw(6*width) << '-' << setfill(' ') << endl;
+				
+		for( unsigned int i = 0; i < size; i++ ) {
+			cout << setw(3) << i+1 << ". "
+				<< setw(width-1) << left << fleet[i]->getName() << right
+				<< setw(width-5) << fleet[i]->getVelocity()
+				<< setw(width) << fleet[i]->getScope()
+				<< setw(width+1) << fleet[i]->getDurability()
+				<< setw(width) << fleet[i]->getCapacity()
+				<< setw(width) << fleet[i]->getCombatValue() << endl;
+		}
+		cout << endl;
+	}
+	else {
+		cout << "Twoj arsenal jest pusty" << endl;
+	}
+}

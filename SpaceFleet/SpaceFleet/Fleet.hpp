@@ -22,9 +22,12 @@ public:
 	~Fleet();
 	
 	void display();
+	void shortDisplay();
 	void add(Unit* newUnit);
 	void assignWeapon(Unit* unit, Combat* ship, Weapon* weapon);
 	void removeWeapon(unsigned int unit, unsigned int ship);
+	
+	unsigned int howManyUnits() { return fleet.size(); }
 	
 	Arsenal* getArsenal() {return &myArsenal;} // co jesli nie dodano arsenalu??
 	Unit* getUnit(unsigned int chosen);

@@ -46,8 +46,7 @@ void Ship::display() {
 	const int width = 13;
 	
 	cout.precision(0);
-	cout<< dec
-		<< setw(width) << left << this->name << right
+	cout<< setw(width) << left << this->name << right
 		<< setw(width) << this->velocity
 		<< setw(width) << this->scope
 		<< setw(width) << this->durability

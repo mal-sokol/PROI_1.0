@@ -52,6 +52,7 @@ void View::createFleet() {
 	
 	
 	myFleet = fleetPtr;
+	myFleet->shortDisplay();
 }
 
 Unit* View::createUnit() {
@@ -222,3 +223,115 @@ void View::showMain() {
 }
 
 
+void View::chooseFormation() {
+	
+	int margin = 5;
+	int width = 13;
+	menu->formations();
+	
+	int choice;
+	cin >> choice;
+	
+	while(cin.good() && (choice>=0 || choice<5)) {
+		switch(choice) {
+			case 0:
+				
+				break;
+			case 1:
+				system("cls");
+//				system("clear");
+				cout << endl
+				<< setw(margin-2) << ' ' << right << setfill('*') << setw(width) << " " << "LINE" << left << setw(width) << " " << setfill(' ') << endl << endl;
+
+
+				cin.ignore(1000, '\n');
+				menu->formations();
+				cin.clear();
+				cin >> choice;
+				break;
+			case 2:
+				cout << endl
+				<< setw(margin-2) << ' ' << right << setfill('*') << setw(width-1) << " " << "MATRIX" << left << setw(width-1) << " " << setfill(' ') << endl << endl;
+
+
+				system("cls");
+//				system("clear");
+				cin.ignore(1000, '\n');
+				menu->formations();
+				cin.clear();
+				cin >> choice;
+				break;
+			case 3:
+				cout << endl
+				<< setw(margin-2) << ' ' << right << setfill('*') << setw(width-1) << " " << "SPEARE" << left << setw(width-1) << " " << setfill(' ') << endl << endl;
+				
+				break;
+			case 4:
+				cout << endl
+				<< setw(margin-2) << ' ' << right << setfill('*') << setw(width) << " " << "CUBE" << left << setw(width-1) << " " << setfill(' ') << endl << endl;
+				
+				break;
+		}
+	}
+}
+
+void View::formation(int choice) {
+	
+	formationType formation = (formationType)choice;
+	int margin = 5;
+	unsigned int whichUnit, whichShip;
+	unsigned int size = myFleet->howManyUnits();
+	
+	myFleet->shortDisplay();
+	cout << endl
+	<< setw(margin) << ' ' << "Podaj pozycje wybranwej jenostki lub przejdz dalej: " << setw(margin) << ' ' ;
+	cin >> whichUnit;
+	cin.ignore(1000, '\n');
+	while(cin.good() && (whichUnit > 0 && whichUnit < size)) {
+		
+		myFleet->getUnit(whichUnit)->display();
+		myFleet->getUnit(whichUnit)->displayMembers();
+		
+		unsigned int unitSize = myFleet->getUnit(whichUnit)->getNumOfShips();
+		
+		cout << setw(margin) << ' ' << "Podaj pozycje wybranego statku lub zmien jednostke: " << setw(margin) << ' ' ;
+		cin >> whichShip;
+		
+		while(cin.good() && (whichUnit > 0 || whichUnit < unitSize)) {
+			
+			system("cls");
+//			system("clear");
+			
+			myFleet->getUnit(whichUnit)->getShip(whichShip)->setFormation(formation);
+			
+			myFleet->getUnit(whichUnit)->setDurability();
+			myFleet->getUnit(whichUnit)->setVelocity();
+			myFleet->getUnit(whichUnit)->setScope();
+			myFleet->getUnit(whichUnit)->setCombatValue();
+			myFleet->getUnit(whichUnit)->setCapacity();
+			
+			cin.ignore(1000, '\n');
+			cin.clear();
+			myFleet->getUnit(whichUnit)->display();
+			myFleet->getUnit(whichUnit)->displayMembers();
+			cout << setw(margin) << ' ' << "Podaj pozycje wybranego statku lub przejdz dalej: " << setw(margin) << ' ' ;
+			cin >> whichShip;
+		}
+		cin.ignore(1000, '\n');
+		cin.clear();
+		
+		system("cls");
+//		system("clear");
+		
+		myFleet->shortDisplay();
+		cout << endl
+		<< setw(margin) << ' ' << "Podaj pozycje wybranwej jenostki lub przejdz dalej: " << setw(margin) << ' ' ;
+		cin >> whichUnit;
+		cin.ignore(1000, '\n');
+	}
+	cin.ignore(1000, '\n');
+	cin.clear();
+	
+	system("cls");
+//	system("clear");
+}

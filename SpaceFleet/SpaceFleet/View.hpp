@@ -30,6 +30,8 @@ public:
 	void showInstructions() {menu->instructions();}
 	void showMain();
 	void chooseFromMain();
+	void chooseFormation();
+	void formation(int choice);
 	
 private:
 	Menu* menu;

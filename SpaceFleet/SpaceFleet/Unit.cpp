@@ -107,8 +107,8 @@ void Unit::setVelocity() {
 			total = min;
 			}
 			else {
-				bonus = (int)(2*sumVelInLine*(20-inLine)); //Bonus zalezy od ilosci(x) statkow w formacji linia i ich sredniej predkosci(v) wg wzoru: -2vx(x-20)
-				total = (int)(0.5*(min + bonus)); //Calkowita prekosc to srednia z predkosci minimalnej i bonusowej
+				bonus = (2*sumVelInLine*(20-inLine)); //Bonus zalezy od ilosci(x) statkow w formacji linia i ich sredniej predkosci(v) wg wzoru: -2vx(x-20)
+				total = (0.5*(min + bonus)); //Calkowita prekosc to srednia z predkosci minimalnej i bonusowej
 			}
 		}
 	}
