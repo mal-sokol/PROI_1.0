@@ -325,14 +325,17 @@ void View::formation(int choice) {
 			myFleet->getUnit(whichUnit)->setCombatValue();
 			myFleet->getUnit(whichUnit)->setCapacity();
 			
-//			cin.ignore(1000, '\n');
-			cin.clear();
+
+
 			myFleet->getUnit(whichUnit)->display();
 			myFleet->getUnit(whichUnit)->displayMembers();
 			cout << setw(margin) << ' ' << "Podaj pozycje wybranego statku lub przejdz dalej: " << setw(margin) << ' ' ;
+			
+			cin.ignore(1000, '\n');
+//			cin.clear();
 			cin >> whichShip;
 		}
-		cin.ignore(1000, '\n');
+//		cin.ignore(1000, '\n');
 		cin.clear();
 		
 		system("cls");
