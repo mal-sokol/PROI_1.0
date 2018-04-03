@@ -154,13 +154,13 @@ Weapon* View::createWeapon() {
 	return weaponPtr;
 }
 
-Arsenal& View::createArsenal() {
+void View::fillArsenal() {
 	
 	int numW;
 	Weapon* weaponPtr;
 	
-	Arsenal& arsenalRef = *(new Arsenal());
-	
+//	Arsenal& arsenalRef = *(new Arsenal());
+//	
 	menu->howManyWeapons();
 	cin >> numW;
 	while(!cin.good() || (numW<1)) {
@@ -172,9 +172,8 @@ Arsenal& View::createArsenal() {
 	
 	for(int j = 0; j<numW; j++) {
 		weaponPtr = createWeapon();
-		arsenalRef.add(weaponPtr);
+		myFleet->attachToArsenal(weaponPtr);
 	}
-	return arsenalRef;
 }
 
 void View::chooseFromMain() {
@@ -196,13 +195,13 @@ void View::chooseFromMain() {
 				cin >> choice;
 				break;
 			case 2:
-				if(myFleet->getArsenal() == NULL) {
-					myFleet->attachArsenal(createArsenal());  // w przypadku istniejacego arsenalu zostaje nadpisany!!!!
-				}
-				else {
-					
-				}
+				fillArsenal();
 				cin.ignore(1000, '\n');
+				
+				system("cls");
+//				system("clear");
+				
+				myFleet->getArsenal()->display();
 				menu->main();
 				cin.clear();
 				cin >> choice;
@@ -223,35 +222,3 @@ void View::showMain() {
 }
 
 
-
-int View::oldMain() { // zawartosc maina do rozdysponowania w oddzielne funkcje
-	
-	cout << fixed;
-	cout.precision(2);
-	
-//	system("clear");
-	system("cls");
-	
-//	myFleet.display();
-//	menu->instructions();
-//	myFleet.getArsenal()->display();
-//	cout << "Nacisnij dowolny klawisz i enter aby kontynuowac" << endl << endl;
-//	cin >> a;
-//	cin.ignore(1000, '\n');
-//	
-//	menu.main();
-//	cout << endl << setw(5) << ' ';
-//	cin >> choice;
-//	while(!cin.good() || (choice!=1 && choice!=2 && choice !=3)) {
-//		cin.clear();
-//		cin.ignore(1000, '\n');
-//		cout << setw(5) << ' ';
-//		cin >> choice;
-//	}
-//	menu.extendMain(choice);
-//	
-//	myFleet.choose(choice, l);
-	//myFleet.~Fleet();
-	
-	return 0;
-}

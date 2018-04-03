@@ -32,7 +32,7 @@ public:
 	Weapon* getWeapon(unsigned int chosen);
 	vector<Unit*> getFleet() {return fleet;}
 	
-	void attachArsenal(Arsenal& newArsenal) {this->myArsenal = newArsenal;} 
+	void attachToArsenal(Weapon* created) {this->myArsenal.add(created);} 
 	
 	void findBest(char criteria);
 	

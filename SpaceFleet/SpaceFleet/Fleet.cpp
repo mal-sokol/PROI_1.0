@@ -56,7 +56,7 @@ Unit* Fleet::getUnit(unsigned int chosen) {
 		return this->fleet[chosen-1];
 	}
 	else {
-		cout << "Unit not found" << endl;
+		cout << "Nie masz tyle jednostek" << endl;
 		return NULL;
 	}
 }

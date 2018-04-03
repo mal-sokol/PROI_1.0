@@ -14,16 +14,16 @@ using namespace std;
 
 int main() {
 	
-//	View* view = new View();
-//	if(view->start()) {
-//		view->createFleet();
-//		view->showInstructions();
-//		view->showMain();
-//	}
-//	delete view;
+	View* view = new View();
+	if(view->start()) {
+		view->createFleet();
+		view->showInstructions();
+		view->showMain();
+	}
+	delete view;
 
-	Test* test = new Test();
-	cout << test->Test::test7();
-	delete test;
+//	Test* test = new Test();
+//	cout << test->Test::test7() << endl;
+//	delete test;
 	return 0;
 }

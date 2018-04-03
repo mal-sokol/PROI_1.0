@@ -77,7 +77,8 @@ void Menu::main() {
 		<< setw(margin) << ' ' << "3) Ustaw w formacje" << endl
 		<< setw(margin) << ' ' << "4) Pokaz najlepsza jednostke" << endl
 		<< setw(margin-2) << ' ' << setfill('*') << setw(2*width + 6) << " " << setfill(' ') << endl
-		<< setw(margin) << ' ' << " Podaj numer wybranej pozycji." << endl;
+		<< setw(margin) << ' ' << " Podaj numer wybranej pozycji." << endl
+		<< setw(margin-2) << ' ';
 }
 
 void Menu::extendMain(int option) {
