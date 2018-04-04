@@ -160,8 +160,6 @@ void View::fillArsenal() {
 	int numW;
 	Weapon* weaponPtr;
 	
-//	Arsenal& arsenalRef = *(new Arsenal());
-//	
 	menu->howManyWeapons();
 	cin >> numW;
 	while(!cin.good() || (numW<1)) {
@@ -194,11 +192,10 @@ void View::chooseFromMain() {
 //				system("clear");
 				
 				myFleet->display();
-//				cin.ignore(1000, '\n');
+				while(getchar() != '\n');
+				while(getchar() != '\n');
+				while(getchar() != '\n');
 				menu->main(hasArsenal);
-				
-//				cin.clear();
-//				cin >> choice;
 				break;
 			case 2:
 				fillArsenal();
@@ -236,7 +233,7 @@ void View::chooseFromMain() {
 //		system("clear");
 		hasArsenal = myFleet->hasArsenal();
 		menu->main(hasArsenal);
-		cin.ignore(1000, '\n');
+//		cin.ignore(1000, '\n');
 		cin >> choice;
 	}
 }
@@ -381,6 +378,7 @@ void View::armAShip() {
 	system("cls");
 //	system("clear");
 	
+		
 	myFleet->getArsenal()->display();
 	myFleet->shortDisplay();
 	cout << endl
@@ -406,9 +404,11 @@ void View::armAShip() {
 		while(cin.good() && whichShip > 0 && whichShip <= numOfShips) {
 			
 			if(myFleet->getUnit(whichUnit)->getShip(whichShip)->getCombatValue() != 0) {
-				cin.ignore(1000, '\n');
+//				cin.ignore(1000, '\n');
+
 				system("cls");
 //				system("clear");
+
 				myFleet->getUnit(whichUnit)->display();
 				myFleet->getUnit(whichUnit)->displayCombat();
 				myFleet->getArsenal()->display();
@@ -430,6 +430,9 @@ void View::armAShip() {
 					myFleet->getUnit(whichUnit)->setScope();
 					myFleet->getUnit(whichUnit)->setCombatValue();
 					myFleet->getUnit(whichUnit)->setCapacity();
+					
+					system("cls");
+//					system("clear");
 					
 					myFleet->getUnit(whichUnit)->display();
 					myFleet->getUnit(whichUnit)->displayCombat();

@@ -112,6 +112,8 @@ void Fleet::findBest(char criteria) {
 			}
 		}
 	temp->display();
+	while(getchar() != '\n');
+	while(getchar() != '\n');
 	}
 }
 
@@ -136,9 +138,12 @@ void Fleet::shortDisplay() {
 	cout << fixed;
 	
 	int width = 13;
+	
 	unsigned int size = this->fleet.size();
 	if(size) {
-			cout<< setw(6*width) << right << "WARTOSC" << endl <<  "     "
+			cout << endl
+				<< right << setfill('-') << setw(31) << " " << "TWOJE JEDNOSTKI" << left << setw(32) << " " << setfill(' ') << endl
+				<< setw(6*width) << right << "WARTOSC" << endl <<  "     "
 				<< setw(width-1) << left << "NAZWA" << right
 				<< setw(width-5) << "PREDKOSC"
 				<< setw(width) << "ZASIEG"

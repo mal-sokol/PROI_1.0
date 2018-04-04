@@ -57,7 +57,9 @@ void Arsenal::display() {
 	int width = 13;
 	unsigned int size = this->arsenal.size();
 	if(size) {
-			cout<< setw(5*width + 5) << right << "WARTOSC" << endl <<  "     "
+			cout << endl
+				<< right << setfill('-') << setw(29) << " " << "TWOJ ARSENAL" << left << setw(30) << " " << setfill(' ') << endl
+				<< setw(5*width + 5) << right << "WARTOSC" << endl <<  "     "
 				<< setw(width) << left << "NAZWA" << right
 				<< setw(width) << "PREDKOSC"
 				<< setw(width) << "ZASIEG"
