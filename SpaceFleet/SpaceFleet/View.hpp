@@ -32,6 +32,7 @@ public:
 	void chooseFormation();
 	void formation(int choice);
 	void formationHeader(int choice);
+	void armAShip();
 	
 private:
 	Menu* menu;

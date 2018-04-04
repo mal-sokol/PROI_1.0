@@ -26,7 +26,7 @@ public:
 	void howManyWeapons();
 	void whichShipType();
 	void inProgress(unsigned int i, string name);
-	void main();
+	void main(bool hasArsenal);
 	void extendMain(int option);
 	void instructions();
 	void formations();

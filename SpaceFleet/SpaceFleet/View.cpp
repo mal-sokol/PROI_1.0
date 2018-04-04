@@ -181,12 +181,13 @@ void View::chooseFromMain() {
 	
 	int choice;
 	char which;
+	bool hasArsenal = myFleet->hasArsenal();
 	
-	menu->main();
+	menu->main(hasArsenal);
 	
 	cin >> choice;
 	
-	while(cin.good() && choice>0 && choice<5) {
+	while(cin.good() && choice>0 && choice<6) {
 		switch(choice) {
 			case 1:
 				system("cls");
@@ -194,10 +195,10 @@ void View::chooseFromMain() {
 				
 				myFleet->display();
 //				cin.ignore(1000, '\n');
-				menu->main();
+				menu->main(hasArsenal);
 				
-				cin.clear();
-				cin >> choice;
+//				cin.clear();
+//				cin >> choice;
 				break;
 			case 2:
 				fillArsenal();
@@ -207,20 +208,12 @@ void View::chooseFromMain() {
 //				system("clear");
 				
 				myFleet->getArsenal()->display();
-				menu->main();
-				cin.clear();
-				cin >> choice;
+				cin.ignore(1000, '\n');
 				break;
 			case 3:
 				chooseFormation();
 				cin.ignore(1000, '\n');
-				
-				system("cls");
-//				system("clear");
 
-				menu->main();
-				cin.clear();
-				cin >> choice;
 				break;
 			case 4:
 				menu->criteria();
@@ -232,7 +225,17 @@ void View::chooseFromMain() {
 				}
 				myFleet->findBest(which);
 				break;
+			case 5:
+				if(hasArsenal) {
+				armAShip();
+				cin.ignore(1000, '\n');
+				}
+				break;
 		}
+		system("cls");
+//		system("clear");
+		hasArsenal = myFleet->hasArsenal();
+		menu->main(hasArsenal);
 		cin.ignore(1000, '\n');
 		cin >> choice;
 	}
@@ -353,6 +356,104 @@ void View::formation(int choice) {
 //		system("clear");
 
 		formationHeader(choice);
+		
+		myFleet->shortDisplay();
+		cout << endl
+			<< setw(margin) << ' ' << "Podaj pozycje wybranwej jenostki lub przejdz dalej: " << setw(margin) << ' ' ;
+		cin >> whichUnit;
+//		cin.ignore(1000, '\n');
+	}
+	cin.ignore(1000, '\n');
+	cin.clear();
+	
+	system("cls");
+//	system("clear");
+}
+
+
+
+void View::armAShip() {
+	
+	int margin = 5;
+	unsigned int whichUnit, whichShip, whichWeapon;
+	unsigned int size = myFleet->howManyUnits();
+	
+	system("cls");
+//	system("clear");
+	
+	myFleet->getArsenal()->display();
+	myFleet->shortDisplay();
+	cout << endl
+	<< setw(margin) << ' ' << "Podaj pozycje wybranwej jenostki lub przejdz dalej: " << setw(margin) << ' ' ;
+	cin >> whichUnit;
+	
+	while(cin.good() && (whichUnit > 0 && whichUnit <= size)) {
+		
+		system("cls");
+//		system("clear");
+		
+		myFleet->getArsenal()->display();
+		myFleet->getUnit(whichUnit)->display();
+		myFleet->getUnit(whichUnit)->displayCombat();
+		
+//		unsigned int numOfCombat = myFleet->getUnit(whichUnit)->getNumOfCombat();
+		unsigned int numOfShips = myFleet->getUnit(whichUnit)->getNumOfShips();
+		
+		cout << setw(margin) << ' ' << "Podaj pozycje wybranego statku: " << setw(margin) << ' ' ;
+		cin >> whichShip;
+
+		
+		while(cin.good() && whichShip > 0 && whichShip <= numOfShips) {
+			
+			if(myFleet->getUnit(whichUnit)->getShip(whichShip)->getCombatValue() != 0) {
+				cin.ignore(1000, '\n');
+				system("cls");
+//				system("clear");
+				myFleet->getUnit(whichUnit)->display();
+				myFleet->getUnit(whichUnit)->displayCombat();
+				myFleet->getArsenal()->display();
+				cout << setw(margin) << ' ' << "Podaj pozycje wybranej broni: " << setw(margin) << ' ' ;
+				cin >> whichWeapon;
+				
+				unsigned int arsenalSize = myFleet->getArsenal()->howManyWeapons();
+				
+				while(cin.good() && whichWeapon > 0 && whichWeapon <= arsenalSize) {
+					
+//					Arsenal* aPtr = myFleet->getArsenal();
+					Weapon weapon = (*myFleet->getArsenal()->getWeapon(whichWeapon));
+					Weapon* wPtr = &weapon;
+					Combat* cPtr = static_cast<Combat*> (myFleet->getUnit(whichUnit)->getShip(whichShip));
+					cPtr->setWeapon(wPtr);
+					
+					myFleet->getUnit(whichUnit)->setDurability();
+					myFleet->getUnit(whichUnit)->setVelocity();
+					myFleet->getUnit(whichUnit)->setScope();
+					myFleet->getUnit(whichUnit)->setCombatValue();
+					myFleet->getUnit(whichUnit)->setCapacity();
+					
+					myFleet->getUnit(whichUnit)->display();
+					myFleet->getUnit(whichUnit)->displayCombat();
+					myFleet->getArsenal()->display();
+					cout << setw(margin) << ' ' << "Podaj pozycje wybranej broni: " << setw(margin) << ' ' ;
+					cin >> whichWeapon;
+				}
+			}
+			
+			myFleet->getArsenal()->display();
+			myFleet->getUnit(whichUnit)->display();
+			myFleet->getUnit(whichUnit)->displayCombat();
+			
+			cin.ignore(1000, '\n');
+			cin.clear();
+			
+			cout << setw(margin) << ' ' << "Podaj pozycje wybranego statku lub przejdz dalej: " << setw(margin) << ' ' ;
+			cin >> whichShip;
+		}
+//		cin.ignore(1000, '\n');
+//		cin.sync();
+		
+		system("cls");
+//		system("clear");
 		
 		myFleet->shortDisplay();
 		cout << endl

@@ -31,7 +31,7 @@ Combat::~Combat()
 
 }
 
-void Combat::getWeapon(Weapon* ptr) {
+void Combat::setWeapon(Weapon* ptr) {
 	this->weapon = ptr;
 }
 

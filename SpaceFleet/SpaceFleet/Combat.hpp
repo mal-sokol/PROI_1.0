@@ -21,7 +21,7 @@ public:
 	Combat& operator= (const Combat& other);
 	
 	void display();
-	void getWeapon(Weapon* weapon);
+	void setWeapon(Weapon* weapon);
 	void loseWeapon();
 	
 	static unsigned int getNumberOfCombat() {return numberOfCombat;}
@@ -29,6 +29,12 @@ public:
 	double getScope() const;
 	double getDurability() const;
 	double getCombatValue() const;
+	Weapon* getWeapon() {
+		if(this->weapon) {
+			return weapon;
+		}
+		else return NULL;
+	}
 	
 private:
 	double combatValue;

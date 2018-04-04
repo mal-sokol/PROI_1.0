@@ -18,7 +18,7 @@ int test4() {
 	
 	myShip.display();
 	cout << endl << endl;
-	myShip.getWeapon(weaponPtr);
+	myShip.setWeapon(weaponPtr);
 	myShip.display();
 	
 	getchar();

@@ -80,13 +80,15 @@ void Arsenal::add(Weapon* weapon) {
 	this->arsenal.push_back(weapon);
 }
 
-//void Arsenal::remove(unsigned int i) {
-//	
-//	unsigned int size = arsenal.size();
-//	if(i<size) {
-//		
-//	}
-//}
+void Arsenal::remove(unsigned int i) {
+	
+	i--;
+	if(i < arsenal.size()) {
+	delete this->arsenal[i];
+	this->arsenal.erase(arsenal.begin()+i);
+	}
+}
+
 
 Weapon* Arsenal::getWeapon(unsigned int chosen) {
 	unsigned int size = arsenal.size();

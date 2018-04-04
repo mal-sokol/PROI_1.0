@@ -81,6 +81,36 @@ void Unit::displayMembers() {
 	}
 }
 
+void Unit::displayCombat() {
+	const int width = 13;
+	cout.precision(2);
+	cout << fixed;
+	unsigned int size = this->unit.size();
+	int j = 1;
+	if(size) {
+		
+		cout<< "     "
+			<< setw(width) << left << "NAZWA" << right
+			<< setw(width) << "PREDKOSC(%c)"
+			<< setw(width) << "ZASIEG(ly)"
+			<< setw(width) << "WYTRZYMALOSC"
+			<< setw(width) << "FORMACJA" << endl
+			<< setfill('-') << setw(5*width + 5) << '-' << setfill(' ') << endl;
+		for( unsigned int i = 0; i < size; i++ ) {
+			if(this->unit[i]->getCombatValue()) {
+				cout << right << setw(3) << j << ". ";
+				this->unit[i]->display();
+				cout << endl;
+				j++;
+			}
+		}
+	}
+	else {
+		cout << "This unit has no members" << endl;
+	}
+}
+
+
 void Unit::setVelocity() {
 	double total = 0;
 	int inLine = 0;

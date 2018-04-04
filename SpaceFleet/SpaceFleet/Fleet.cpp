@@ -27,24 +27,21 @@ void Fleet::add(Unit* newUnit) {
 
 
 
-void Fleet::assignWeapon(Unit* unit, Combat* ship, Weapon* weapon) {
-//	Unit* ptrU = getUnit(unit);
-//	Weapon* ptrW = this->arsenal.getWeapon(weapon);
-//	Ship* prtS = NULL;
-//	
-//	if(ptrU && ptrW) {
-//		ptrS = ptrU->getShip(ship);
-//		if(ptrS) {
-//			if(ptrS->getCobatValue() != 0) {
-//				ptrS->getWeapon(ptrW);
-//				this->arsenal.erase(ptrW);
-//			}
-//		}
-//	}
+void Fleet::assignWeapon(Combat* combat, unsigned int weapon) {
+	
+	if(combat->getCombatValue() != 0) {
+		combat->setWeapon(this->myArsenal.getWeapon(weapon));
+		this->getArsenal()->remove(weapon);
+	}
 }
 
-void Fleet::removeWeapon(unsigned int unit, unsigned int ship) {
+void Fleet::removeWeapon(Combat* combat) {
 	
+	if(combat->getCombatValue() != 0) {
+		Weapon* wPtr = combat->getWeapon();
+		combat->loseWeapon();
+		this->myArsenal.add(wPtr);
+	}
 }
 
 Unit* Fleet::getUnit(unsigned int chosen) {

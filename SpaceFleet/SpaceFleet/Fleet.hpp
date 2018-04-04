@@ -24,8 +24,8 @@ public:
 	void display();
 	void shortDisplay();
 	void add(Unit* newUnit);
-	void assignWeapon(Unit* unit, Combat* ship, Weapon* weapon);
-	void removeWeapon(unsigned int unit, unsigned int ship);
+	void assignWeapon(Combat* combat, unsigned int weapon);
+	void removeWeapon(Combat* combat);
 	
 	unsigned int howManyUnits() { return fleet.size(); }
 	
@@ -44,6 +44,11 @@ public:
 	bool cmpDurability (Unit* i,Unit* j) { return (i->getDurability() < j->getDurability()); }
 	bool cmpCombatValue (Unit* i,Unit* j) { return (i->getCombatValue() < j->getCombatValue()); }
 	bool cmpCapacity (Unit* i,Unit* j) { return (i->getCapacity() < j->getCapacity()); }
+	
+	bool hasArsenal() {
+		bool x = !(myArsenal.isEmpty());
+		return x;
+	}
 	
 private:
 	Arsenal myArsenal;

@@ -9,7 +9,6 @@
 
 using namespace std;
 
-//enum { velocity, scope, durability, combatValue, capactiy };
 
 class Unit
 {
@@ -17,8 +16,10 @@ public:
 	Unit();
 	Unit(string name);
 	~Unit();
+	
 	void display();
 	void displayMembers();
+	void displayCombat();
 	void add(Ship* member);
 	Unit& operator= (const Unit& other);
 	

@@ -85,48 +85,25 @@ void Menu::formations() {
 		<< setw(margin-2) << ' ';
 }
 
-void Menu::main() {
+void Menu::main(bool hasArsenal) {
 	
 	cout << endl
 		<< setw(margin-2) << ' ' << right << setfill('*') << setw(width) << " " << "MENU" << left << setw(width) << " " << setfill(' ') << endl << endl
 		<< setw(margin) << ' ' << "1) Zobacz swoja flote" << endl
 		<< setw(margin) << ' ' << "2) Dodaj bron do arsenalu" << endl
 		<< setw(margin) << ' ' << "3) Ustaw w formacje" << endl
-		<< setw(margin) << ' ' << "4) Pokaz najlepsza jednostke" << endl
+		<< setw(margin) << ' ' << "4) Pokaz najlepsza jednostke" << endl;
+		
+		if(hasArsenal) {
+			cout << setw(margin) << ' ' << "5) Przydziel bron do statku" << endl;
+		}
+		
+	cout << endl
 		<< setw(margin-2) << ' ' << setfill('*') << setw(2*width + 6) << " " << setfill(' ') << endl
 		<< setw(margin) << ' ' << " Podaj numer wybranej pozycji." << endl
 		<< setw(margin-2) << ' ';
 }
 
-void Menu::extendMain(int option) {
-	
-	//	system("clear");
-	system("cls");
-	
-	cout << endl
-		<< setw(margin-2) << ' ' << setfill('*') << setw(width) << " " << "MENU" << " " << setw(width) << " " << setfill(' ') << endl << endl;
-		if(option==1) {
-			cout << setw(margin + 4) << ' ' << setw(column) << "A. Wyswietl jednostki"<< endl
-				<< setw(margin + 4) << ' ' << setw(column) << "B. Wyswietl statki" << endl
-				<< setw(margin + 4) << ' ' << setw(column) << "C. Wyswietl arsenal" << endl << endl;
-		}
-		if(option==2) {
-			cout << setw(margin + 4) << ' ' << "Podaj kryterium:" << endl
-				<< setw(margin + 4) << ' ' << "A. Predkosc" << endl
-				<< setw(margin + 4) << ' ' << "B. Zasieg" << endl
-				<< setw(margin + 4) << ' ' << "C. Wytrzymalosc" << endl
-				<< setw(margin + 4) << ' ' << "D. Wartosc bojowa" << endl
-				<< setw(margin + 4) << ' ' << "E. Ladunek" << endl << endl;
-		}
-		if(option==3) {
-			cout << setw(margin + 4) << ' ' << "A. Przydziel bron" << endl
-				<< setw(margin + 4) << ' ' << "B. Przydziel formacje" << endl;
-		}
-	cout << endl << endl;
-	
-		cout << setw(margin-2) << ' ' << setfill('*') << setw(2*width + 6) << " " << setfill(' ') << endl << endl
-		<< setw(margin);
-}
 
 void Menu::criteria() {
 	cout << endl 

@@ -23,6 +23,12 @@ public:
 	void remove(unsigned int i);
 	Weapon* getWeapon(unsigned int i);
 	
+	unsigned int howManyWeapons() {return arsenal.size();}
+	bool isEmpty() {
+		bool x = (arsenal.size() == 0);
+		return x;
+	}
+	
 private:
 	vector <Weapon*> arsenal;
 };
