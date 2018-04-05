@@ -1,7 +1,7 @@
 CC = g++
 
-main.out : main.o Ship.o Cargo.o Combat.o Arsenal.o Unit.o Fleet.o Menu.o Weapon.o
-	$(CC) main.o Ship.o Cargo.o Combat.o Arsenal.o Unit.o Fleet.o Menu.o Weapon.o -o main.out
+main.out : main.o Ship.o Cargo.o Combat.o Arsenal.o Unit.o Fleet.o Menu.o Weapon.o View.o
+	$(CC) main.o Ship.o Cargo.o Combat.o Arsenal.o Unit.o Fleet.o Menu.o Weapon.o View.out -o main.out
 
 main.o : main.cpp
 	$(CC) -g -c main.cpp -o main.o
@@ -29,6 +29,9 @@ Menu.o : Menu.cpp Menu.hpp Fleet.hpp Unit.hpp Ship.hpp Combat.hpp Cargo.hpp
 	
 Weapon.o : Weapon.cpp Weapon.hpp
 	$(CC) -g -c Weapon.cpp -o Weapon.o
+	
+View.o : View.cpp View.hpp Menu.hpp Ship.hpp Cargo.hpp Combat.hpp Weapon.hpp Fleet.hpp
+	$(CC) -g -c View.cpp -o View.o
 	
 clear :
 	rm *.o main.out
